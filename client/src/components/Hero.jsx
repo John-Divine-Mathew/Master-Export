@@ -31,15 +31,6 @@ export default function Hero({ onOpenDemo }) {
       {/* Centered Content Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 flex flex-col items-center justify-center text-center">
         
-        {/* Subtle Enterprise Pill Tag */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sky-300 text-xs font-bold tracking-wide shadow-lg mb-6 hover:bg-white/15 transition-all">
-          <span className="flex h-2 w-2 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-400"></span>
-          </span>
-          <span className="text-slate-100">Enterprise Export & Import Business Management</span>
-        </div>
-
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] max-w-4xl mx-auto">
           Global Trade Operations,{' '}
