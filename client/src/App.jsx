@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustBar from './components/TrustBar';
 import Features from './components/Features';
 import Workflow from './components/Workflow';
 import LiveProfitEngine from './components/LiveProfitEngine';
@@ -49,9 +48,6 @@ export default function App() {
       <Hero 
         onOpenDemo={() => setDemoOpen(true)} 
       />
-
-      {/* Trust Bar */}
-      <TrustBar />
 
       {/* Core Features Grid */}
       <Features />
