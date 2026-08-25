@@ -1,124 +1,122 @@
 import React from 'react';
 import { 
   Boxes, 
-  Route, 
-  FileText, 
-  Coins, 
-  PieChart, 
-  Warehouse, 
-  CheckCircle2 
+  Truck, 
+  FileSpreadsheet, 
+  Calculator, 
+  Users, 
+  ShieldAlert,
+  ArrowRight,
+  Sparkles,
+  Layers,
+  ArrowUpRight
 } from 'lucide-react';
 
 export default function Features() {
-  const featureList = [
+  const features = [
     {
-      icon: <Boxes className="w-5 h-5" />,
-      title: "Export & Import Orders",
-      desc: "Centralized order hub for export customer sales and import supplier purchases with multi-product items and automatic total calculation.",
-      highlights: [
-        "Export Proforma Invoices & Quotations",
-        "Supplier Purchase Orders (PO)",
-        "Lifecycle tracking from Draft to Delivered"
-      ]
+      icon: Boxes,
+      tag: 'Order Management',
+      title: 'Export & Import Lifecycle',
+      description: 'Track orders seamlessly from proforma invoicing and advance payment receipts to full fulfillment, customs clearance, and overseas bank remittance.',
+      highlight: 'Proforma to Settlement',
+      color: 'blue'
     },
     {
-      icon: <Route className="w-5 h-5" />,
-      title: "Multi-Modal Logistics",
-      desc: "Track shipments across Sea, Air, Road, and Couriers. Monitor Port of Loading, Port of Discharge, ETD, ETA, container and vessel numbers.",
-      highlights: [
-        "Vessel & Air Waybill tracking",
-        "POL & POD schedule milestones",
-        "Freight & marine insurance allocation"
-      ]
+      icon: Truck,
+      tag: 'Logistics Tracking',
+      title: 'Multi-Modal Freight Tracking',
+      description: 'Monitor container shipments by Ocean (FCL/LCL), Air cargo express, and Inland haulage. Automatic tracking updates with carrier milestone notifications.',
+      highlight: 'Ocean, Air & Road',
+      color: 'sky'
     },
     {
-      icon: <FileText className="w-5 h-5" />,
-      title: "Trade Document Vault",
-      desc: "Generate and store standard international trade documents like Commercial Invoices, Packing Lists, Bill of Lading, and Certificate of Origin.",
-      highlights: [
-        "One-click compliant PDF creation",
-        "Linked to specific orders & shipments",
-        "Organized and searchable cloud vault"
-      ]
+      icon: FileSpreadsheet,
+      tag: 'Customs & Compliance',
+      title: 'Automated Document Vault',
+      description: 'Generate audit-ready Commercial Invoices, Packing Lists, Certificates of Origin, and Shipping Bills in PDF format with 1-click single-admin dispatch.',
+      highlight: '1-Click PDF Generation',
+      color: 'indigo'
     },
     {
-      icon: <Coins className="w-5 h-5" />,
-      title: "Multi-Currency Finance",
-      desc: "Handle cross-border transactions in USD, EUR, INR, AED, GBP, and CNY with automatic currency conversion and payment status tracking.",
-      highlights: [
-        "Automatic exchange rate conversion",
-        "Pending & partial payment alerts",
-        "Bank wire and Letter of Credit (LC) logs"
-      ]
+      icon: Calculator,
+      tag: 'Forex & Profits',
+      title: 'Real-Time Net Profit Engine',
+      description: 'Accurately calculate net margins per trade order factoring product procurement, ocean freight, marine insurance, and customs duties in 6+ currencies.',
+      highlight: 'Multi-Currency Forex',
+      color: 'emerald'
     },
     {
-      icon: <PieChart className="w-5 h-5" />,
-      title: "Net Profit Calculation",
-      desc: "Know your exact profitability per order. Automatically deduct product cost, ocean freight, insurance, customs duties, and port charges.",
-      highlights: [
-        "Formula: Revenue - (Costs + Freight + Duties)",
-        "Profit per order, shipment, and month",
-        "Export sales by country insights"
-      ]
+      icon: Users,
+      tag: 'Directory',
+      title: 'Global Partners & CHA Directory',
+      description: 'Centralize records of overseas buyers, domestic manufacturing suppliers, Custom House Agents (CHA), and international shipping lines in one secured portal.',
+      highlight: 'Single-Admin Control',
+      color: 'amber'
     },
     {
-      icon: <Warehouse className="w-5 h-5" />,
-      title: "Inventory & HS Code Catalog",
-      desc: "Catalog products with Harmonized System (HS) Codes, minimum stock alerts, and automated stock-in / stock-out audits.",
-      highlights: [
-        "Accurate HS Code compliance",
-        "Real-time stock movement ledger",
-        "Low inventory threshold alerts"
-      ]
+      icon: ShieldAlert,
+      tag: 'Risk & Inventory',
+      title: 'Inventory & DGFT Compliance',
+      description: 'Manage warehouse stock, track HS codes, ensure DGFT / ICEGATE trade compliance, and receive instant alert notifications on shipment delays or payment dues.',
+      highlight: 'Real-Time Telemetry',
+      color: 'rose'
     }
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-white scroll-mt-20" id="features">
+    <section className="py-16 sm:py-20 bg-slate-50/50 scroll-mt-20" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
-            Core System Features
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-            Built Specifically for International Trade
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
+            <Layers className="w-3.5 h-3.5" />
+            <span>Comprehensive ERP Architecture</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black text-brand-navy tracking-tight">
+            Engineered Specifically for Global Trade Operators
           </h2>
-          <p className="text-base text-slate-600 max-w-2xl mx-auto">
-            Everything you need to manage customers, suppliers, inventory, shipments, and finances without spreadsheets.
+          <p className="mt-3.5 text-base text-slate-600 font-normal">
+            Eliminate operational chaos with automated workflows designed to handle every phase of international commerce.
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featureList.map((item, index) => (
-            <div 
-              key={index}
-              className="bg-slate-50/50 hover:bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-blue-200 hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5">
-                  {item.icon}
-                </div>
-                <h3 className="text-lg font-bold text-brand-navy mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
-                  {item.desc}
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {features.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <div 
+                key={index}
+                className="group relative bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all flex items-center justify-center font-bold shadow-sm">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">
+                      {item.tag}
+                    </span>
+                  </div>
 
-              <ul className="space-y-2 pt-4 border-t border-slate-200/60">
-                {item.highlights.map((point, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                  <h3 className="text-lg font-bold text-brand-navy group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2.5 text-sm text-slate-600 leading-relaxed font-normal">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                  <span>{item.highlight}</span>
+                  <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </div>
+            );
+          })}
         </div>
 
       </div>

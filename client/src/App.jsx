@@ -8,6 +8,7 @@ import LiveProfitEngine from './components/LiveProfitEngine';
 import LiveShipmentTracker from './components/LiveShipmentTracker';
 import ModuleTabs from './components/ModuleTabs';
 import DocumentVault from './components/DocumentVault';
+import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import CTABanner from './components/CTABanner';
@@ -87,6 +88,9 @@ export default function App() {
 
       {/* Trade Document Vault Showcase */}
       <DocumentVault onOpenDocPreview={handleOpenDocPreview} />
+
+      {/* Client Success Stories & Social Proof */}
+      <Testimonials />
 
       {/* Pricing & Deployment Plans */}
       <Pricing onOpenDemo={() => setDemoOpen(true)} />

@@ -1,31 +1,43 @@
 import React from 'react';
-import { Anchor, Plane, Truck, FileCheck, Coins } from 'lucide-react';
+import { Ship, Plane, Truck, ShieldCheck, Coins, FileCheck2, Globe2, Building2 } from 'lucide-react';
 
 export default function TrustBar() {
+  const trustItems = [
+    { icon: Ship, label: 'Ocean Freight', sub: 'FCL & LCL 40ft/20ft' },
+    { icon: Plane, label: 'Air Cargo', sub: 'IATA Compliant Lanes' },
+    { icon: Truck, label: 'Inland Logistics', sub: 'Port to ICD Transit' },
+    { icon: ShieldCheck, label: 'DGFT & ICEGATE', sub: 'Customs & HS Codes' },
+    { icon: Coins, label: 'Multi-Currency', sub: 'Forex Hedging & AED/USD' },
+    { icon: FileCheck2, label: 'Verified Trade Docs', sub: 'Commercial Inv & B/L' },
+  ];
+
   return (
-    <div className="border-y border-slate-100 bg-slate-50/50 py-7">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center lg:justify-between gap-6 sm:gap-8 text-slate-600 text-xs font-semibold">
-          <div className="flex items-center gap-2">
-            <Anchor className="w-4 h-4 text-blue-600" />
-            <span>Maritime Sea Freight</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Plane className="w-4 h-4 text-blue-600" />
-            <span>Global Air Cargo</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Truck className="w-4 h-4 text-blue-600" />
-            <span>Cross-Border Road Transit</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <FileCheck className="w-4 h-4 text-blue-600" />
-            <span>DGFT & Customs Compliant</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Coins className="w-4 h-4 text-blue-600" />
-            <span>Multi-Currency Settlements</span>
-          </div>
+    <div className="bg-slate-900 border-y border-slate-800 text-slate-300 py-6 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-4">
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
+            Trusted by Global Exporters, Importers, Clearing Agents & Freight Forwarders
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 pt-2">
+          {trustItems.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div 
+                key={idx} 
+                className="flex items-center gap-3 p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-blue-500/40 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-sky-400 flex items-center justify-center shrink-0">
+                  <Icon className="w-4 h-4" />
+                </div>
+                <div className="truncate">
+                  <div className="text-xs font-bold text-white truncate">{item.label}</div>
+                  <div className="text-[10px] text-slate-400 truncate">{item.sub}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
