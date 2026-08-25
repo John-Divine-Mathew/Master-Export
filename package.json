@@ -1,0 +1,21 @@
+{
+  "name": "master-export-tradeflow-erp",
+  "version": "1.0.0",
+  "description": "Master Export (TradeFlow ERP) - All-in-One Export & Import ERP Management Platform",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "start:server": "cd server && npm start"
+  },
+  "keywords": [
+    "export-import",
+    "erp",
+    "react",
+    "tailwind",
+    "express",
+    "nodejs"
+  ],
+  "author": "Master Export Team",
+  "license": "ISC"
+}

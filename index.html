@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Export – All-in-One Export & Import ERP Management System</title>
+  <meta name="description" content="Master Export (TradeFlow ERP) is a modern web-based ERP system designed for export and import businesses. Manage orders, shipments, multi-currency invoices, customs documents, inventory, and net profit calculations from a single platform.">
+  <meta name="keywords" content="Export Import ERP, TradeFlow ERP, Master Export, Shipment Tracking, International Trade Management, Multi-Currency Invoicing, Logistics ERP">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-banner">
+    <span class="tag">New Release</span>
+    <span>TradeFlow ERP 2.0 is live with Automated Customs Document & Multi-Currency Profit Engine</span>
+    <a href="#interactive-tools">Try Live Calculator &rarr;</a>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="brand-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <img src="assets/logo.png" alt="Master Export Logo - Connecting Global Markets">
+        <div class="brand-text-wrap">
+          <span class="brand-title">MASTER EXPORT</span>
+          <span class="brand-subtitle">Connecting Global Markets</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#workflow" class="nav-link">Trade Workflow</a>
+        <a href="#interactive-tools" class="nav-link">Live Tools</a>
+        <a href="#modules" class="nav-link">ERP Modules</a>
+        <a href="#documents" class="nav-link">Trade Documents</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary btn-sm" id="openLoginBtn">
+          <i class="fa-solid fa-lock"></i> Admin Login
+        </button>
+        <button class="btn btn-primary btn-sm" id="openDemoBtn">
+          <i class="fa-solid fa-rocket"></i> Request Demo
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>Next-Gen Export & Import ERP Architecture</span>
+        </div>
+
+        <h1 class="hero-title">
+          Scale Your Global Trade Operations with <span class="gradient-text">Master Export ERP</span>
+        </h1>
+
+        <p class="hero-description">
+          The centralized ERP management platform built specifically for Export & Import business owners. Replace disconnected spreadsheets, manual invoices, lost documents, and chaotic logistics with one seamless, high-speed system.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-lg" id="heroDemoBtn">
+            <i class="fa-solid fa-play"></i> Get Started Free
+          </button>
+          <a href="#interactive-tools" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-calculator"></i> Profit & Shipment Simulator
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <h4 class="counter" data-target="100">100%</h4>
+            <p>Single-Admin Control</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4 class="counter" data-target="6">6+</h4>
+            <p>Global Currencies (USD, EUR, INR, AED...)</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4 class="counter" data-target="40">40%</h4>
+            <p>Faster Customs Clearance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Interactive Mockup -->
+      <div class="hero-visual">
+        <div class="hero-mockup-card">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <div class="mockup-dot red"></div>
+              <div class="mockup-dot yellow"></div>
+              <div class="mockup-dot green"></div>
+            </div>
+            <div class="mockup-title">
+              <i class="fa-solid fa-gauge-high"></i> Master Export Command Center
+            </div>
+            <span style="font-size: 0.72rem; color: #93c5fd;"><i class="fa-solid fa-signal"></i> Live Sync</span>
+          </div>
+
+          <div class="mockup-body">
+            <!-- KPI Grid -->
+            <div class="mockup-kpi-grid">
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-icon blue">
+                  <i class="fa-solid fa-ship"></i>
+                </div>
+                <div class="mockup-kpi-info">
+                  <h5>Export Orders</h5>
+                  <h3>$148,500 <span style="font-size:0.7rem; color:#10b981;">+18%</span></h3>
+                </div>
+              </div>
+
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-icon green">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="mockup-kpi-info">
+                  <h5>Estimated Profit</h5>
+                  <h3>$36,240 <span style="font-size:0.7rem; color:#10b981;">24.4%</span></h3>
+                </div>
+              </div>
+
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-icon purple">
+                  <i class="fa-solid fa-boxes-packing"></i>
+                </div>
+                <div class="mockup-kpi-info">
+                  <h5>Active Shipments</h5>
+                  <h3>12 Vessels</h3>
+                </div>
+              </div>
+
+              <div class="mockup-kpi">
+                <div class="mockup-kpi-icon orange">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <div class="mockup-kpi-info">
+                  <h5>Pending Invoices</h5>
+                  <h3>$18,400</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Shipment Tracker Preview -->
+            <div class="mockup-live-shipment">
+              <div class="live-shipment-header">
+                <h6><i class="fa-solid fa-location-crosshairs" style="color:var(--brand-blue);"></i> Container #MSKU-9821443</h6>
+                <span class="live-badge"><i class="fa-solid fa-circle-dot"></i> In Transit</span>
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); display:flex; justify-content:space-between;">
+                <span>JNPT Mumbai (INBOM) &rarr; Port of Rotterdam (NLRTM)</span>
+                <span>ETA: 28 Aug 2026</span>
+              </div>
+              <div class="shipment-route">
+                <div class="route-line"></div>
+                <div class="route-step">
+                  <div class="route-dot"><i class="fa-solid fa-check"></i></div>
+                  <span>Loaded</span>
+                </div>
+                <div class="route-step">
+                  <div class="route-dot"><i class="fa-solid fa-check"></i></div>
+                  <span>Departed</span>
+                </div>
+                <div class="route-step">
+                  <div class="route-dot active"><i class="fa-solid fa-ship"></i></div>
+                  <span>At Sea</span>
+                </div>
+                <div class="route-step">
+                  <div class="route-dot" style="background:#cbd5e1;"><i class="fa-solid fa-anchor"></i></div>
+                  <span>Customs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Currency Exchange Ticker -->
+            <div class="mockup-currency-strip">
+              <span><i class="fa-solid fa-coins"></i> Live Rates:</span>
+              <span>1 USD = ₹85.00</span>
+              <span>1 EUR = $1.09</span>
+              <span>1 AED = ₹23.14</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Badges -->
+        <div class="floating-badge-1">
+          <i class="fa-solid fa-shield-halved" style="color: var(--success); font-size: 1.2rem;"></i>
+          <div>
+            <div style="font-size:0.75rem; color:#64748b;">Customs Compliant</div>
+            <div>Automated HS Code Docs</div>
+          </div>
+        </div>
+
+        <div class="floating-badge-2">
+          <i class="fa-solid fa-bolt" style="color: var(--brand-blue); font-size: 1.2rem;"></i>
+          <div>
+            <div style="font-size:0.75rem; color:#64748b;">Instant Profit Engine</div>
+            <div>Net Margins Calculated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-title">Engineered for Exporters, Importers, Merchant Traders & Freight Forwarders</div>
+      <div class="trust-badges-grid">
+        <div class="trust-pill"><i class="fa-solid fa-anchor"></i> Maritime Sea Freight</div>
+        <div class="trust-pill"><i class="fa-solid fa-plane-departure"></i> Global Air Cargo</div>
+        <div class="trust-pill"><i class="fa-solid fa-truck-moving"></i> Cross-Border Road Transit</div>
+        <div class="trust-pill"><i class="fa-solid fa-file-shield"></i> DGFT & Customs Ready</div>
+        <div class="trust-pill"><i class="fa-solid fa-globe"></i> Multi-Currency Settlements</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section class="section section-bg-light" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Enterprise Power for Single Business Owners</span>
+        <h2 class="section-title">Everything You Need to Run an International Trade Empire</h2>
+        <p class="section-subtitle">
+          Designed precisely around the complete export & import workflow. Manage customers, vendors, multi-item orders, international logistics, and expenses without hiring an army of accountants.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <h3>Export & Import Orders</h3>
+          <p>
+            Unified order hub to handle both customer sales contracts (Export) and supplier purchases (Import). Supports multi-product lines, auto-calculated totals, and destination tracking.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Export Quotations & Proforma Invoices</li>
+            <li><i class="fa-solid fa-check"></i> Import Supplier Purchase Orders</li>
+            <li><i class="fa-solid fa-check"></i> Multi-status lifecycle (Draft to Delivered)</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <h3>Multi-Modal Logistics</h3>
+          <p>
+            Complete shipment management across Sea Freight, Air Freight, Road Transport, and Express Couriers. Track vessels, flights, containers, ETD, ETA, and port schedules.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Port of Loading & Port of Discharge</li>
+            <li><i class="fa-solid fa-check"></i> Container & Air Waybill tracking</li>
+            <li><i class="fa-solid fa-check"></i> Freight & Cargo Insurance cost allocation</li>
+          </ul>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h3>Trade Document Vault</h3>
+          <p>
+            Eliminate missing paperwork. Generate, store, and organize Commercial Invoices, Packing Lists, Bill of Lading (BL), Certificate of Origin (COO), and Shipping Bills.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> One-click export document generation</li>
+            <li><i class="fa-solid fa-check"></i> Order & Shipment linked storage</li>
+            <li><i class="fa-solid fa-check"></i> Downloadable PDF formatted records</li>
+          </ul>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+          </div>
+          <h3>Multi-Currency Finance</h3>
+          <p>
+            Operate globally in USD, EUR, INR, AED, GBP, and CNY. Record incoming customer remittances and supplier payments with dynamic exchange conversion rates.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Automatic currency conversion</li>
+            <li><i class="fa-solid fa-check"></i> Partial payment & overdue alerts</li>
+            <li><i class="fa-solid fa-check"></i> Bank wire, TT, Letter of Credit (LC) logs</li>
+          </ul>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3>Net Profit Calculation</h3>
+          <p>
+            Know your exact profitability on every single shipment and order. Automatically deduct product cost, ocean freight, cargo insurance, customs duties, and warehouse charges.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Formula: Revenue - (Costs + Freight + Duties)</li>
+            <li><i class="fa-solid fa-check"></i> Profit per order & per container</li>
+            <li><i class="fa-solid fa-check"></i> Monthly and annual margin breakdowns</li>
+          </ul>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-warehouse"></i>
+          </div>
+          <h3>Inventory & HS Code Catalog</h3>
+          <p>
+            Maintain detailed product specifications, Harmonized System (HS) Codes, minimum stock alerts, country of origin tags, and real-time stock-in / stock-out audits.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-check"></i> Real-time stock movement ledger</li>
+            <li><i class="fa-solid fa-check"></i> Low stock automated notifications</li>
+            <li><i class="fa-solid fa-check"></i> Purchase vs Selling unit price history</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Workflow Pipeline Section -->
+  <section class="section workflow-section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">System Architecture Flow</span>
+        <h2 class="section-title">From Order Creation to Bank Remittance</h2>
+        <p class="section-subtitle">
+          Experience how TradeFlow ERP harmonizes every step of international commerce into one continuous, error-free workflow.
+        </p>
+      </div>
+
+      <div class="workflow-steps-grid">
+        <div class="workflow-card">
+          <div class="workflow-number">1</div>
+          <div class="workflow-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h4>Partners & Products</h4>
+          <p>Register international customers, suppliers, and catalog items with HS codes & currencies.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-number">2</div>
+          <div class="workflow-icon"><i class="fa-solid fa-file-invoice"></i></div>
+          <h4>Order Generation</h4>
+          <p>Create Export or Import order contracts with auto-calculated product totals & terms.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-number">3</div>
+          <div class="workflow-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h4>Shipment & Transit</h4>
+          <p>Assign Sea/Air freight, container IDs, Port of Loading/Discharge, ETD & ETA dates.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-number">4</div>
+          <div class="workflow-icon"><i class="fa-solid fa-folder-open"></i></div>
+          <h4>Documents & Customs</h4>
+          <p>Generate Commercial Invoices, Packing Lists, Bill of Lading & Certificate of Origin.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-number">5</div>
+          <div class="workflow-icon"><i class="fa-solid fa-coins"></i></div>
+          <h4>Settlement & Profit</h4>
+          <p>Record payments, log port & freight expenses, and view real-time net profit reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Tools Section -->
+  <section class="section" id="interactive-tools">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Trade Simulator</span>
+        <h2 class="section-title">Try The Live ERP Engine</h2>
+        <p class="section-subtitle">
+          Test drive the automated profit calculator and real-time shipment container tracker built directly from the TradeFlow ERP software specifications.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <!-- Live Tool 1: Profit & Currency Calculation Engine -->
+        <div class="tool-box">
+          <div class="tool-header">
+            <div class="tool-icon"><i class="fa-solid fa-calculator"></i></div>
+            <div>
+              <h3>Export Profit & Currency Engine</h3>
+              <p>Calculate exact profit margin with multi-currency conversion</p>
+            </div>
+          </div>
+
+          <form id="profitCalcForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="calcCurrency">Trade Currency</label>
+                <select id="calcCurrency" class="form-control">
+                  <option value="USD" data-rate="85.00" selected>USD ($) - US Dollar</option>
+                  <option value="EUR" data-rate="92.50">EUR (€) - Euro</option>
+                  <option value="AED" data-rate="23.14">AED (د.إ) - UAE Dirham</option>
+                  <option value="GBP" data-rate="108.20">GBP (£) - British Pound</option>
+                  <option value="CNY" data-rate="11.75">CNY (¥) - Chinese Yuan</option>
+                  <option value="INR" data-rate="1.00">INR (₹) - Indian Rupee</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="calcSelling">Selling Invoice Amount</label>
+                <input type="number" id="calcSelling" class="form-control" value="25000" min="0">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="calcProductCost">Product Sourcing Cost</label>
+                <input type="number" id="calcProductCost" class="form-control" value="16000" min="0">
+              </div>
+
+              <div class="form-group">
+                <label for="calcFreight">Freight & Shipping Cost</label>
+                <input type="number" id="calcFreight" class="form-control" value="2200" min="0">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="calcInsurance">Insurance & Packaging</label>
+                <input type="number" id="calcInsurance" class="form-control" value="450" min="0">
+              </div>
+
+              <div class="form-group">
+                <label for="calcCustoms">Customs & Handling Fees</label>
+                <input type="number" id="calcCustoms" class="form-control" value="650" min="0">
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <div>
+                <div class="label">Net Estimated Profit</div>
+                <div class="profit-value" id="calcProfitResult">$5,700.00</div>
+              </div>
+              <div style="text-align: right;">
+                <div class="label">Profit Margin</div>
+                <div style="font-size: 1.5rem; font-weight: 800; color: #a7f3d0;" id="calcMarginResult">22.8%</div>
+              </div>
+            </div>
+
+            <div class="calc-breakdown">
+              <span id="calcBaseConversion">Converted Value in INR: ₹4,84,500</span>
+              <span id="calcTotalExpenses">Total Expenses: $19,300</span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Live Tool 2: Shipment Tracking Simulator -->
+        <div class="tool-box">
+          <div class="tool-header">
+            <div class="tool-icon"><i class="fa-solid fa-ship"></i></div>
+            <div>
+              <h3>Shipment & Container Tracker</h3>
+              <p>Simulate live tracking across global sea and air routes</p>
+            </div>
+          </div>
+
+          <div class="shipment-search-bar">
+            <select id="shipmentSelect" class="form-control">
+              <option value="EXP-8891">Order #ME-EXP-8891 (Mundra Port to Dubai Jebel Ali - Sea Freight)</option>
+              <option value="IMP-4022">Order #ME-IMP-4022 (Hamburg to Chennai - Air Freight)</option>
+              <option value="EXP-9905">Order #ME-EXP-9905 (JNPT Mumbai to Rotterdam - Sea Freight)</option>
+            </select>
+            <button class="btn btn-primary btn-sm" id="simulateTrackBtn">
+              <i class="fa-solid fa-magnifying-glass"></i> Track
+            </button>
+          </div>
+
+          <div class="shipment-result-card" id="trackerDisplayCard">
+            <div class="shipment-meta">
+              <div class="shipment-meta-item">
+                <span>Shipment ID</span>
+                <strong id="trackId">SHP-2026-8891</strong>
+              </div>
+              <div class="shipment-meta-item">
+                <span>Vessel / Flight</span>
+                <strong id="trackVessel">MSC Gülsün V.412</strong>
+              </div>
+              <div class="shipment-meta-item">
+                <span>Container No.</span>
+                <strong id="trackContainer">MEDU-749210-9</strong>
+              </div>
+            </div>
+
+            <div class="tracking-timeline" id="trackingTimeline">
+              <div class="timeline-step completed">
+                <h5>Booking Confirmed & Goods Inspected</h5>
+                <p>Port of Loading: Mundra (INMUN) – Cleared Customs</p>
+              </div>
+              <div class="timeline-step completed">
+                <h5>Vessel Departed Origin Port</h5>
+                <p>Departure: 21 Aug 2026, 08:30 IST</p>
+              </div>
+              <div class="timeline-step current">
+                <h5>In Transit – Arabian Sea</h5>
+                <p>Current Speed: 18.4 knots | ETA: 27 Aug 2026, 14:00 GST</p>
+              </div>
+              <div class="timeline-step">
+                <h5>Port of Discharge: Jebel Ali (AEJEA)</h5>
+                <p>Awaiting berth arrival & custom bill of entry clearance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive ERP Modules Tab Section -->
+  <section class="section section-bg-light" id="modules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Deep-Dive Module Showcase</span>
+        <h2 class="section-title">Built for the Complete Trade Lifecycle</h2>
+        <p class="section-subtitle">
+          Explore how each specialized module inside Master Export ERP solves daily operational bottlenecks.
+        </p>
+      </div>
+
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="tab-dashboard"><i class="fa-solid fa-gauge"></i> Dashboard & Analytics</button>
+        <button class="tab-btn" data-tab="tab-orders"><i class="fa-solid fa-cart-flatbed"></i> Orders & Shipments</button>
+        <button class="tab-btn" data-tab="tab-finance"><i class="fa-solid fa-receipt"></i> Invoicing & Payments</button>
+        <button class="tab-btn" data-tab="tab-partners"><i class="fa-solid fa-users"></i> Customers & Suppliers</button>
+        <button class="tab-btn" data-tab="tab-inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventory & HS Codes</button>
+      </div>
+
+      <!-- Tab 1: Dashboard -->
+      <div class="tab-content-pane active" id="tab-dashboard">
+        <div class="tab-pane-grid">
+          <div class="tab-pane-info">
+            <h3>Unified Executive Dashboard</h3>
+            <p>
+              Get a bird’s eye view of your entire export and import business instantly upon logging in. No more calculating profits in spreadsheets or tracking containers on five different carrier sites.
+            </p>
+            <ul class="tab-pane-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Real-time KPIs: Active Export & Import orders count</li>
+              <li><i class="fa-solid fa-circle-check"></i> Monthly Revenue, Operational Expenses, and Net Profit</li>
+              <li><i class="fa-solid fa-circle-check"></i> Low Stock Threshold Alerts and Pending Remittance flags</li>
+              <li><i class="fa-solid fa-circle-check"></i> Recent Orders and live shipment status overview</li>
+            </ul>
+            <button class="btn btn-primary" onclick="document.getElementById('openDemoBtn').click()">
+              <i class="fa-solid fa-eye"></i> Explore Dashboard Demo
+            </button>
+          </div>
+          <div class="tab-pane-preview">
+            <div style="background:#fff; border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+              <h5 style="margin-bottom:12px; font-size:0.9rem; color:var(--brand-navy);"><i class="fa-solid fa-chart-column" style="color:var(--brand-blue);"></i> Monthly Trade Revenue vs Expense</h5>
+              <div style="display:flex; align-items:flex-end; gap:14px; height:140px; padding-top:20px; border-bottom:1px solid #e2e8f0;">
+                <div style="flex:1; background:#e0f2fe; height:60%; border-radius:6px; position:relative;" title="Jan: $45,000">
+                  <div style="background:var(--brand-blue); height:75%; border-radius:6px;"></div>
+                </div>
+                <div style="flex:1; background:#e0f2fe; height:80%; border-radius:6px; position:relative;" title="Feb: $68,000">
+                  <div style="background:var(--brand-blue); height:82%; border-radius:6px;"></div>
+                </div>
+                <div style="flex:1; background:#e0f2fe; height:95%; border-radius:6px; position:relative;" title="Mar: $82,000">
+                  <div style="background:var(--brand-blue); height:88%; border-radius:6px;"></div>
+                </div>
+                <div style="flex:1; background:#e0f2fe; height:75%; border-radius:6px; position:relative;" title="Apr: $60,000">
+                  <div style="background:var(--brand-blue); height:70%; border-radius:6px;"></div>
+                </div>
+                <div style="flex:1; background:#e0f2fe; height:100%; border-radius:6px; position:relative;" title="May: $94,500">
+                  <div style="background:var(--brand-blue); height:85%; border-radius:6px;"></div>
+                </div>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:#64748b; margin-top:8px;">
+                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Orders & Shipments -->
+      <div class="tab-content-pane" id="tab-orders">
+        <div class="tab-pane-grid">
+          <div class="tab-pane-info">
+            <h3>Dual Order & Logistics Management</h3>
+            <p>
+              Seamlessly switch between Export Orders (sales to overseas buyers) and Import Orders (procurement from international suppliers). Every order connects automatically with its shipping schedule.
+            </p>
+            <ul class="tab-pane-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Export Order lifecycle: Draft &rarr; Confirmed &rarr; Ready &rarr; Shipped &rarr; Delivered</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sea, Air, Road & Courier freight tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> Track Port of Loading (POL), Port of Discharge (POD), ETD and ETA</li>
+              <li><i class="fa-solid fa-circle-check"></i> Link container numbers and freight costs to specific orders</li>
+            </ul>
+            <button class="btn btn-primary" onclick="document.getElementById('openDemoBtn').click()">View Order Workflow</button>
+          </div>
+          <div class="tab-pane-preview">
+            <table style="width:100%; font-size:0.78rem; text-align:left; border-collapse:collapse;">
+              <thead>
+                <tr style="border-bottom:2px solid #e2e8f0; color:#64748b;">
+                  <th style="padding:8px 4px;">Order #</th>
+                  <th style="padding:8px 4px;">Type</th>
+                  <th style="padding:8px 4px;">Country</th>
+                  <th style="padding:8px 4px;">Value</th>
+                  <th style="padding:8px 4px;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #f1f5f9;">
+                  <td style="padding:8px 4px; font-weight:700;">#EXP-9120</td>
+                  <td style="padding:8px 4px;"><span style="color:#0284c7; font-weight:600;">Export</span></td>
+                  <td style="padding:8px 4px;">United States</td>
+                  <td style="padding:8px 4px;">$42,000</td>
+                  <td style="padding:8px 4px;"><span class="live-badge">Shipped</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid #f1f5f9;">
+                  <td style="padding:8px 4px; font-weight:700;">#IMP-3318</td>
+                  <td style="padding:8px 4px;"><span style="color:#8b5cf6; font-weight:600;">Import</span></td>
+                  <td style="padding:8px 4px;">Germany</td>
+                  <td style="padding:8px 4px;">€28,500</td>
+                  <td style="padding:8px 4px;"><span class="live-badge" style="background:#fef3c7; color:#b45309; border-color:#fde68a;">In Transit</span></td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 4px; font-weight:700;">#EXP-9121</td>
+                  <td style="padding:8px 4px;"><span style="color:#0284c7; font-weight:600;">Export</span></td>
+                  <td style="padding:8px 4px;">UAE (Dubai)</td>
+                  <td style="padding:8px 4px;">AED 65,000</td>
+                  <td style="padding:8px 4px;"><span class="live-badge">Confirmed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Finance -->
+      <div class="tab-content-pane" id="tab-finance">
+        <div class="tab-pane-grid">
+          <div class="tab-pane-info">
+            <h3>Invoices, Expenses & Profitability</h3>
+            <p>
+              Eliminate revenue leakage. Track customer invoices, supplier payouts, and log granular operational expenses such as customs duty, ocean freight, cargo insurance, and warehousing.
+            </p>
+            <ul class="tab-pane-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Multi-currency invoice creation and PDF generation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Payment status tracking: Pending, Partially Paid, Paid, Overdue</li>
+              <li><i class="fa-solid fa-circle-check"></i> Expense classification (Customs, Packaging, Freight, Insurance)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Accurate profit per shipment and per country reports</li>
+            </ul>
+            <button class="btn btn-primary" onclick="document.getElementById('openDemoBtn').click()">Explore Finance Engine</button>
+          </div>
+          <div class="tab-pane-preview">
+            <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:16px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:0.85rem;">
+                <span style="font-weight:700; color:var(--brand-navy);">Invoice #INV-2026-094</span>
+                <span style="color:#10b981; font-weight:700;">PAID IN FULL</span>
+              </div>
+              <div style="font-size:0.78rem; color:#64748b; line-height:1.6;">
+                <div><strong>Customer:</strong> EuroTrade Logistics GmbH</div>
+                <div><strong>Base Currency:</strong> EUR (€) &rarr; Converted to INR (₹)</div>
+                <div><strong>Amount:</strong> €34,200 (₹31,63,500)</div>
+                <div><strong>Payment Method:</strong> Bank Wire / SWIFT TT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Partners -->
+      <div class="tab-content-pane" id="tab-partners">
+        <div class="tab-pane-grid">
+          <div class="tab-pane-info">
+            <h3>Global Customers & Suppliers Directory</h3>
+            <p>
+              Maintain a pristine directory of all your international buyers and verified suppliers across multiple countries, complete with default trade currencies, payment terms, and contact points.
+            </p>
+            <ul class="tab-pane-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Complete partner dossiers with tax IDs, addresses & contacts</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom payment terms (e.g. Net 30, 50% Advance, LC at Sight)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Historical order tracking and lifetime transaction volume</li>
+            </ul>
+          </div>
+          <div class="tab-pane-preview">
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px; display:flex; align-items:center; gap:12px;">
+                <div style="width:36px; height:36px; border-radius:50%; background:#e0f2fe; color:#0284c7; display:flex; align-items:center; justify-content:center; font-weight:700;">US</div>
+                <div>
+                  <div style="font-size:0.85rem; font-weight:700; color:var(--brand-navy);">Atlantic Global Imports LLC</div>
+                  <div style="font-size:0.75rem; color:#64748b;">United States &bull; Currency: USD ($) &bull; Terms: LC 60 Days</div>
+                </div>
+              </div>
+              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px; display:flex; align-items:center; gap:12px;">
+                <div style="width:36px; height:36px; border-radius:50%; background:#ede9fe; color:#8b5cf6; display:flex; align-items:center; justify-content:center; font-weight:700;">AE</div>
+                <div>
+                  <div style="font-size:0.85rem; font-weight:700; color:var(--brand-navy);">Al-Khaleej Trading Corp</div>
+                  <div style="font-size:0.75rem; color:#64748b;">Dubai, UAE &bull; Currency: AED &bull; Terms: 30% Advance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Inventory -->
+      <div class="tab-content-pane" id="tab-inventory">
+        <div class="tab-pane-grid">
+          <div class="tab-pane-info">
+            <h3>Inventory & Harmonized System (HS) Catalog</h3>
+            <p>
+              Organize every product you import and export. Ensure full compliance with customs authorities by logging proper HS Codes, unit measurement standards, and automated stock alerts.
+            </p>
+            <ul class="tab-pane-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Harmonized Tariff Code (HS Code) tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> Stock-in (import arrival) & Stock-out (export dispatch) logs</li>
+              <li><i class="fa-solid fa-circle-check"></i> Minimum stock thresholds preventing backorders</li>
+            </ul>
+          </div>
+          <div class="tab-pane-preview">
+            <div style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:16px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-weight:700; font-size:0.85rem; color:var(--brand-navy);">Basmati Rice Premium (50kg)</span>
+                <span style="font-size:0.75rem; font-weight:600; color:var(--primary-blue);">HS: 1006.30.20</span>
+              </div>
+              <div style="font-size:0.78rem; color:#64748b;">
+                <div>Current In Stock: <strong>1,450 Bags</strong></div>
+                <div>Min. Alert Threshold: <strong>200 Bags</strong></div>
+                <div style="margin-top:6px; color:#10b981; font-weight:600;"><i class="fa-solid fa-check-circle"></i> Stock Healthy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trade Documents Showcase Section -->
+  <section class="section" id="documents">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Compliance & Documentation</span>
+        <h2 class="section-title">One-Click International Trade Documents</h2>
+        <p class="section-subtitle">
+          Master Export ERP supports all official documentation required by customs authorities, shipping lines, freight forwarders, and overseas banks.
+        </p>
+      </div>
+
+      <div class="docs-grid">
+        <div class="doc-card" onclick="openDocPreview('Commercial Invoice')">
+          <i class="fa-solid fa-file-invoice-dollar doc-icon"></i>
+          <h4>Commercial Invoice</h4>
+          <span>Export / Import official valuation & buyer terms</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Packing List')">
+          <i class="fa-solid fa-boxes-packing doc-icon"></i>
+          <h4>Packing List</h4>
+          <span>Gross weight, net weight & container dimensions</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Bill of Lading')">
+          <i class="fa-solid fa-ship doc-icon"></i>
+          <h4>Bill of Lading (B/L)</h4>
+          <span>Ocean carrier title document & receipt of cargo</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Certificate of Origin')">
+          <i class="fa-solid fa-certificate doc-icon"></i>
+          <h4>Certificate of Origin</h4>
+          <span>Country certification for preferential customs duty</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Air Waybill')">
+          <i class="fa-solid fa-plane doc-icon"></i>
+          <h4>Air Waybill (AWB)</h4>
+          <span>Airline consignment receipt for air cargo freight</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Shipping Bill')">
+          <i class="fa-solid fa-stamp doc-icon"></i>
+          <h4>Shipping Bill / Bill of Entry</h4>
+          <span>Customs port clearance declaration document</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Insurance Certificate')">
+          <i class="fa-solid fa-shield-halved doc-icon"></i>
+          <h4>Marine Insurance Policy</h4>
+          <span>Cargo risk protection covering CIF Incoterms</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+
+        <div class="doc-card" onclick="openDocPreview('Proforma Invoice')">
+          <i class="fa-solid fa-receipt doc-icon"></i>
+          <h4>Proforma Invoice (PI)</h4>
+          <span>Preliminary sale agreement for Letter of Credit</span>
+          <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-eye"></i> Preview</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / Deployment Options -->
+  <section class="section section-bg-light" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Flexible Deployment Plans</span>
+        <h2 class="section-title">Transparent Plans for Modern Exporters</h2>
+        <p class="section-subtitle">
+          Whether you are an independent merchant exporter or a fast-growing international trading house, TradeFlow ERP delivers unparalleled ROI.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="pricing-card">
+          <h3>Starter Trader</h3>
+          <p class="sub">For emerging exporters managing initial shipment volumes</p>
+          <div class="pricing-price">$49 <span>/ month</span></div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Single Admin Full Access</li>
+            <li><i class="fa-solid fa-check"></i> Up to 50 Export & Import Orders/mo</li>
+            <li><i class="fa-solid fa-check"></i> Sea & Air Freight Tracker</li>
+            <li><i class="fa-solid fa-check"></i> Multi-Currency Support (6 Currencies)</li>
+            <li><i class="fa-solid fa-check"></i> Standard Trade Document Generator</li>
+            <li><i class="fa-solid fa-check"></i> Net Profit Calculation Engine</li>
+          </ul>
+          <button class="btn btn-secondary" onclick="document.getElementById('openDemoBtn').click()">Choose Starter</button>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="pricing-card featured">
+          <span class="pricing-featured-badge">Most Popular</span>
+          <h3>Professional ERP</h3>
+          <p class="sub">Complete end-to-end automation for active trade houses</p>
+          <div class="pricing-price">$99 <span>/ month</span></div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited Orders & Shipments</li>
+            <li><i class="fa-solid fa-check"></i> Automated Customs PDF Documentation</li>
+            <li><i class="fa-solid fa-check"></i> Real-time Live Exchange Rate Sync</li>
+            <li><i class="fa-solid fa-check"></i> Cloud Document Storage (Cloudinary)</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Analytics & Sales by Country</li>
+            <li><i class="fa-solid fa-check"></i> Low Stock Threshold & Overdue Alerts</li>
+            <li><i class="fa-solid fa-check"></i> Priority 24/7 Dedicated Support</li>
+          </ul>
+          <button class="btn btn-primary" onclick="document.getElementById('openDemoBtn').click()">Start 14-Day Free Trial</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="pricing-card">
+          <h3>Custom Enterprise / Self-Hosted</h3>
+          <p class="sub">Complete MERN stack source code with dedicated server deployment</p>
+          <div class="pricing-price">$499 <span>/ one-time</span></div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Full React.js + Node.js + MongoDB Source</li>
+            <li><i class="fa-solid fa-check"></i> Self-Hosted on Your Private Cloud / VPS</li>
+            <li><i class="fa-solid fa-check"></i> Custom White-labeling with Your Logo</li>
+            <li><i class="fa-solid fa-check"></i> Custom API Integrations (DGFT, ICEGATE)</li>
+            <li><i class="fa-solid fa-check"></i> Future Multi-User & Role Upgrades</li>
+            <li><i class="fa-solid fa-check"></i> Lifetime Updates & Developer License</li>
+          </ul>
+          <button class="btn btn-secondary" onclick="document.getElementById('openDemoBtn').click()">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">Got Questions? We Have Answers</h2>
+        <p class="section-subtitle">
+          Everything you need to know about Master Export ERP and how it simplifies international trade.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What makes Master Export ERP different from general ERPs?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            General ERPs like Odoo or SAP are generic and overly complex. Master Export is engineered specifically for cross-border international trade: it natively handles Incoterms, Port of Loading/Discharge, Bill of Lading, container tracking, multi-currency conversions (USD, EUR, INR, AED, GBP, CNY), customs document generation, and net shipment profit formulas.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the profit calculation formula work?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            The system automatically calculates Net Profit per order as: <br>
+            <code>Estimated Profit = Selling Invoice Revenue - (Product Sourcing Cost + Ocean/Air Freight + Marine Insurance + Customs Duty + Port/Warehousing Expenses)</code>. It handles multi-currency conversions automatically using live exchange rates.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I manage both Export sales and Import purchases?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Yes! TradeFlow ERP features a unified order management hub where you simply toggle between "Export" (goods shipped to overseas clients) and "Import" (goods procured from global suppliers), linking inventory stock movements automatically.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What technology stack powers this ERP?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            The platform is built on modern MERN stack architecture: React.js with Vite and Tailwind/Vanilla CSS on the frontend, Node.js + Express.js REST API on the backend, and MongoDB Mongoose database collections with JWT authentication.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is the software responsive for mobile and tablet use?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Yes, the entire application is 100% mobile, tablet, and desktop responsive so you can inspect shipments, approve orders, and generate invoices while on the go or visiting ports.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-content">
+        <div class="badge" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;">
+          <i class="fa-solid fa-globe"></i> Master Export Global Infrastructure
+        </div>
+        <h2>Ready to Supercharge Your Export & Import Business?</h2>
+        <p>
+          Join hundreds of international traders who replaced spreadsheets and manual paperwork with Master Export ERP. Get up and running in minutes.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-white btn-lg" id="bottomDemoBtn">
+            <i class="fa-solid fa-rocket"></i> Request Live Admin Demo
+          </button>
+          <button class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: #fff;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="fa-solid fa-arrow-up"></i> Back to Top
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/logo.png" alt="Master Export Logo">
+            <div class="brand-text-wrap">
+              <span class="brand-title">MASTER EXPORT</span>
+              <span class="brand-subtitle" style="color: #38bdf8;">Connecting Global Markets</span>
+            </div>
+          </div>
+          <p>
+            The premier centralized ERP software designed for global export & import business management. Streamlining trade, logistics, documents, and finances.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Modules</h4>
+          <ul>
+            <li><a href="#modules">Export Orders</a></li>
+            <li><a href="#modules">Import Procurement</a></li>
+            <li><a href="#modules">Shipment Tracking</a></li>
+            <li><a href="#documents">Trade Documents</a></li>
+            <li><a href="#modules">Inventory & HS Codes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Finance & Reports</h4>
+          <ul>
+            <li><a href="#interactive-tools">Profit Calculator</a></li>
+            <li><a href="#modules">Multi-Currency Invoicing</a></li>
+            <li><a href="#modules">Payment Gateways</a></li>
+            <li><a href="#modules">Sales by Country</a></li>
+            <li><a href="#modules">Expense Auditing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Security & Support</h4>
+          <ul>
+            <li><a href="#faq">Knowledgebase & FAQ</a></li>
+            <li><a href="#openLoginBtn">Admin Portal Login</a></li>
+            <li><a href="#pricing">Deployment & Licensing</a></li>
+            <li><a href="#openDemoBtn">Book a Live Demo</a></li>
+            <li><a href="#">Privacy Policy & Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Master Export (TradeFlow ERP). All rights reserved.</p>
+        <p><i class="fa-solid fa-shield-check" style="color: #38bdf8;"></i> Enterprise 256-Bit Encrypted Data Protection</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeLoginModal">&times;</button>
+      <div class="modal-header">
+        <img src="assets/logo.png" alt="Logo" style="height: 48px; margin: 0 auto 12px;">
+        <h3>Admin Portal Login</h3>
+        <p>Enter your credentials to access the ERP Command Center</p>
+      </div>
+
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="loginEmail">Administrator Email</label>
+          <input type="email" id="loginEmail" class="form-control" placeholder="admin@masterexport.com" required value="admin@tradeflow.com">
+        </div>
+        <div class="form-group">
+          <label for="loginPass">Secure Password</label>
+          <input type="password" id="loginPass" class="form-control" placeholder="••••••••" required value="masterexport2026">
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; font-size:0.8rem;">
+          <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+            <input type="checkbox" checked> Remember session
+          </label>
+          <a href="#" style="color:var(--brand-blue); font-weight:600;">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In to Dashboard
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Request Demo Modal -->
+  <div class="modal-overlay" id="demoModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeDemoModal">&times;</button>
+      <div class="modal-header">
+        <img src="assets/logo.png" alt="Logo" style="height: 48px; margin: 0 auto 12px;">
+        <h3>Book a Live Product Tour</h3>
+        <p>See how Master Export ERP automates your trade business</p>
+      </div>
+
+      <form id="demoRequestForm">
+        <div class="form-group">
+          <label for="demoName">Full Name</label>
+          <input type="text" id="demoName" class="form-control" placeholder="e.g. Rajesh Kumar" required>
+        </div>
+        <div class="form-group">
+          <label for="demoCompany">Company / Export Firm Name</label>
+          <input type="text" id="demoCompany" class="form-control" placeholder="e.g. Global Horizon Exporters" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="demoEmail">Business Email</label>
+            <input type="email" id="demoEmail" class="form-control" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="demoPhone">Phone / WhatsApp</label>
+            <input type="tel" id="demoPhone" class="form-control" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="demoTradeType">Primary Operations</label>
+          <select id="demoTradeType" class="form-control">
+            <option value="both">Both Export & Import</option>
+            <option value="export">Merchant / Direct Exporter</option>
+            <option value="import">Direct Importer / Distributor</option>
+            <option value="freight">Freight Forwarder / Agent</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-paper-plane"></i> Schedule Interactive Demo
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Document Preview Modal -->
+  <div class="modal-overlay" id="docPreviewModal">
+    <div class="modal-box" style="max-width: 600px;">
+      <button class="modal-close" id="closeDocModal">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-file-pdf" style="font-size: 2.5rem; color: #ef4444; margin-bottom: 8px;"></i>
+        <h3 id="docModalTitle">Document Preview</h3>
+        <p id="docModalSubtitle">TradeFlow ERP Automated Export Document Generator</p>
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; font-size: 0.82rem; line-height: 1.6; margin-bottom: 20px;" id="docModalContent">
+        <!-- Dynamic content injected via JS -->
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="showToast('Sample PDF Document generated and downloaded!')">
+        <i class="fa-solid fa-download"></i> Download Sample PDF Form
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMessage">
+    <i class="fa-solid fa-circle-check" style="color: var(--success); font-size: 1.2rem;"></i>
+    <span id="toastText">Action completed successfully!</span>
+  </div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
