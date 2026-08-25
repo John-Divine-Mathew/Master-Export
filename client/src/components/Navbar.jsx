@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Lock, Rocket, Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Lock, LogIn, Menu, X } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 
-export default function Navbar({ onOpenLogin, onOpenDemo }) {
+export default function Navbar({ onOpenLogin }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleNavClick = () => {
@@ -12,91 +12,95 @@ export default function Navbar({ onOpenLogin, onOpenDemo }) {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-
-        {/* Brand Logo - Uses the authentic Master Export emblem & text cleanly without duplicate labels */}
-        <a href="#" className="flex items-center group shrink-0">
-          <img
-            src={logoImg}
-            alt="Master Export - Connecting Global Markets"
-            className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+        
+        {/* Brand: [Logo] Master Export */}
+        <a href="#" className="flex items-center gap-2.5 group shrink-0">
+          <img 
+            src={logoImg} 
+            alt="Logo" 
+            className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
           />
+          <div className="flex items-center font-black tracking-tight text-xl sm:text-2xl leading-none">
+            <span className="text-slate-900">Master</span>
+            <span className="text-purple-600 ml-1.5">Export</span>
+          </div>
         </a>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-7">
-          <a
-            href="#features"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#features" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
             Features
           </a>
-          <a
-            href="#workflow"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#why-us" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
-            Trade Flow
+            Why Master Export
           </a>
-          <a
-            href="#simulator"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#workflow" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
-            Live Simulator
+            Workflow
           </a>
-          <a
-            href="#modules"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#modules" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
             ERP Modules
           </a>
-          <a
-            href="#documents"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#documents" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
             Documents
           </a>
-          <a
-            href="#pricing"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#pricing" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
             Pricing
           </a>
-          <a
-            href="#faq"
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+          <a 
+            href="#faq" 
+            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
           >
             FAQ
           </a>
         </nav>
 
-        {/* Action Buttons on Desktop */}
+        {/* Action Buttons: Login | Sign In */}
         <div className="hidden sm:flex items-center gap-3">
           <button
             onClick={onOpenLogin}
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 bg-slate-50 hover:bg-sky-50 border border-slate-200 rounded-xl transition-all shadow-sm"
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-slate-700 hover:text-purple-700 bg-slate-50 hover:bg-purple-50 border border-slate-200 hover:border-purple-200 rounded-xl transition-all shadow-sm"
           >
-            <Lock className="w-3.5 h-3.5 text-blue-600" />
-            <span>Admin Portal</span>
+            <Lock className="w-3.5 h-3.5 text-purple-600" />
+            <span>Login</span>
           </button>
           <button
-            onClick={onOpenDemo}
-            className="inline-flex items-center gap-1.5 px-5 py-2 text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 rounded-xl transition-all shadow-md shadow-blue-500/25 transform hover:-translate-y-0.5"
+            onClick={onOpenLogin}
+            className="inline-flex items-center gap-1.5 px-5 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 rounded-xl transition-all shadow-md shadow-purple-500/25 transform hover:-translate-y-0.5"
           >
-            <Rocket className="w-3.5 h-3.5" />
-            <span>Request Demo</span>
+            <LogIn className="w-3.5 h-3.5" />
+            <span>Sign In</span>
           </button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <div className="lg:hidden flex items-center gap-2">
           <button
-            onClick={onOpenDemo}
-            className="sm:hidden px-3.5 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm"
+            onClick={onOpenLogin}
+            className="sm:hidden px-3.5 py-1.5 text-xs font-bold text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-sm"
           >
-            Demo
+            Login
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none"
+            className="p-2 rounded-lg text-slate-700 hover:bg-purple-50 focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <X className="w-6 h-6 text-slate-900" /> : <Menu className="w-6 h-6 text-slate-900" />}
@@ -107,70 +111,70 @@ export default function Navbar({ onOpenLogin, onOpenDemo }) {
       {/* Mobile Drawer */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 space-y-3 shadow-xl max-h-[85vh] overflow-y-auto">
-          <a
-            href="#features"
+          <a 
+            href="#features" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
             Features
           </a>
-          <a
-            href="#workflow"
+          <a 
+            href="#why-us" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
-            Trade Flow Pipeline
+            Why Master Export
           </a>
-          <a
-            href="#simulator"
+          <a 
+            href="#workflow" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
-            Live Simulator (Profit & Tracking)
+            Business Workflow
           </a>
-          <a
-            href="#modules"
+          <a 
+            href="#modules" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
             ERP Modules
           </a>
-          <a
-            href="#documents"
+          <a 
+            href="#documents" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
-            Trade Documents Vault
+            Trade Documents
           </a>
-          <a
-            href="#pricing"
+          <a 
+            href="#pricing" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
-            Pricing & Deployment
+            Pricing & Plans
           </a>
-          <a
-            href="#faq"
+          <a 
+            href="#faq" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
+            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
           >
             FAQ
           </a>
-
+          
           <div className="pt-4 flex flex-col gap-2.5">
             <button
               onClick={() => { setMobileOpen(false); onOpenLogin(); }}
-              className="w-full py-2.5 px-4 text-center text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors flex items-center justify-center gap-1.5"
+              className="w-full py-2.5 px-4 text-center text-xs font-bold text-slate-700 bg-purple-50/70 hover:bg-purple-100 text-purple-900 rounded-xl transition-colors flex items-center justify-center gap-1.5"
             >
-              <Lock className="w-3.5 h-3.5 text-blue-600" />
-              <span>Admin Portal Login</span>
+              <Lock className="w-3.5 h-3.5 text-purple-600" />
+              <span>Login</span>
             </button>
             <button
-              onClick={() => { setMobileOpen(false); onOpenDemo(); }}
-              className="w-full py-2.5 px-4 text-center text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20"
+              onClick={() => { setMobileOpen(false); onOpenLogin(); }}
+              className="w-full py-2.5 px-4 text-center text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 rounded-xl transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/20"
             >
-              <Rocket className="w-3.5 h-3.5" />
-              <span>Request Live Demo</span>
+              <LogIn className="w-3.5 h-3.5" />
+              <span>Sign In</span>
             </button>
           </div>
         </div>

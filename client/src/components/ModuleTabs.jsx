@@ -10,14 +10,14 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export default function ModuleTabs({ onOpenDemo }) {
+export default function ModuleTabs({ onOpenLogin }) {
   const [activeTab, setActiveTab] = useState('dashboard');
 
   const tabs = [
-    { id: 'dashboard', label: 'Dashboard & Analytics', icon: <LayoutDashboard className="w-4 h-4" /> },
-    { id: 'orders', label: 'Orders & Logistics', icon: <ShoppingCart className="w-4 h-4" /> },
-    { id: 'finance', label: 'Invoices & Profits', icon: <Receipt className="w-4 h-4" /> },
-    { id: 'partners', label: 'Customers & Suppliers', icon: <Users className="w-4 h-4" /> },
+    { id: 'dashboard', label: 'Executive Dashboard', icon: <LayoutDashboard className="w-4 h-4" /> },
+    { id: 'orders', label: 'Export & Import Orders', icon: <ShoppingCart className="w-4 h-4" /> },
+    { id: 'finance', label: 'Invoices & Forex', icon: <Receipt className="w-4 h-4" /> },
+    { id: 'partners', label: 'Buyers & Suppliers', icon: <Users className="w-4 h-4" /> },
     { id: 'inventory', label: 'Inventory & HS Codes', icon: <Boxes className="w-4 h-4" /> }
   ];
 
@@ -27,10 +27,10 @@ export default function ModuleTabs({ onOpenDemo }) {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
+          <span className="text-xs font-bold uppercase tracking-widest text-purple-600">
             System Modules
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Integrated ERP Architecture
           </h2>
           <p className="text-base text-slate-600">
@@ -46,8 +46,8 @@ export default function ModuleTabs({ onOpenDemo }) {
               onClick={() => setActiveTab(tab.id)}
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === tab.id
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-slate-50 text-slate-600 border border-slate-200 hover:text-blue-600'
+                  ? 'bg-slate-900 text-white shadow-md shadow-purple-900/10'
+                  : 'bg-purple-50/40 text-slate-700 border border-slate-200 hover:text-purple-600 hover:border-purple-200'
               }`}
             >
               {tab.icon}
@@ -57,64 +57,64 @@ export default function ModuleTabs({ onOpenDemo }) {
         </div>
 
         {/* Tab Content Panels */}
-        <div className="bg-slate-50/50 rounded-2xl p-6 sm:p-10 border border-slate-200">
+        <div className="bg-purple-50/30 rounded-2xl p-6 sm:p-10 border border-purple-100 shadow-sm">
           
           {/* 1. Dashboard Tab */}
           {activeTab === 'dashboard' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <h3 className="text-2xl font-bold text-brand-navy">
+                <h3 className="text-2xl font-bold text-slate-900">
                   Unified Executive Dashboard
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Real-time visibility across export sales, supplier imports, active vessel shipments, and net profit margins upon login.
+                  Real-time visibility across export sales contracts, supplier purchases, operational logistics, and net profit margins upon login.
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                    <span>Real-time KPIs: Orders, Invoices, Shipments</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span>Real-time KPIs: Sales Orders, Invoices, Delivery Status</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                    <span>Monthly Revenue, Expenses & Estimated Profit</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span>Monthly Revenue, Expenses & Net Profit Analytics</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Low Stock Thresholds & Overdue Payment Flags</span>
                   </li>
                 </ul>
                 <button
-                  onClick={onOpenDemo}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors shadow-sm"
+                  onClick={onOpenLogin}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white text-xs font-semibold rounded-xl transition-all shadow-md shadow-purple-500/20"
                 >
                   Explore Dashboard <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
 
-              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center text-xs">
                     <span className="font-bold text-slate-900 flex items-center gap-1.5">
-                      <TrendingUp className="w-4 h-4 text-blue-600" /> Monthly Trade Performance
+                      <TrendingUp className="w-4 h-4 text-purple-600" /> Monthly Trade Performance
                     </span>
                     <span className="text-emerald-600 font-bold">+28.4% YoY</span>
                   </div>
 
                   <div className="h-36 flex items-end justify-between gap-3 pt-4 pb-2 border-b border-slate-100">
-                    <div className="flex-1 bg-slate-100 rounded-t h-[45%] relative">
-                      <div className="bg-blue-600 rounded-t h-[75%]"></div>
+                    <div className="flex-1 bg-purple-50 rounded-t h-[45%] relative">
+                      <div className="bg-purple-600 rounded-t h-[75%]"></div>
                     </div>
-                    <div className="flex-1 bg-slate-100 rounded-t h-[65%] relative">
-                      <div className="bg-blue-600 rounded-t h-[80%]"></div>
+                    <div className="flex-1 bg-purple-50 rounded-t h-[65%] relative">
+                      <div className="bg-purple-600 rounded-t h-[80%]"></div>
                     </div>
-                    <div className="flex-1 bg-slate-100 rounded-t h-[85%] relative">
-                      <div className="bg-blue-600 rounded-t h-[85%]"></div>
+                    <div className="flex-1 bg-purple-50 rounded-t h-[85%] relative">
+                      <div className="bg-purple-600 rounded-t h-[85%]"></div>
                     </div>
-                    <div className="flex-1 bg-slate-100 rounded-t h-[70%] relative">
-                      <div className="bg-blue-600 rounded-t h-[70%]"></div>
+                    <div className="flex-1 bg-purple-50 rounded-t h-[70%] relative">
+                      <div className="bg-purple-600 rounded-t h-[70%]"></div>
                     </div>
-                    <div className="flex-1 bg-slate-100 rounded-t h-[95%] relative">
-                      <div className="bg-blue-600 rounded-t h-[90%]"></div>
+                    <div className="flex-1 bg-purple-50 rounded-t h-[95%] relative">
+                      <div className="bg-purple-600 rounded-t h-[90%]"></div>
                     </div>
                   </div>
                   <div className="flex justify-between text-[10px] font-semibold text-slate-400">
@@ -129,35 +129,35 @@ export default function ModuleTabs({ onOpenDemo }) {
           {activeTab === 'orders' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <h3 className="text-2xl font-bold text-brand-navy">
-                  Dual Order & Logistics Hub
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Export & Import Order Hub
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Manage export sales contracts and import supplier purchase orders with multi-modal freight tracking.
+                  Manage export sales contracts, proforma invoices, and supplier purchase orders from a unified pipeline.
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                    <span>Export lifecycle: Draft &rarr; Confirmed &rarr; Shipped &rarr; Delivered</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span>Export lifecycle: Draft &rarr; Confirmed &rarr; Dispatched &rarr; Fulfilled</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                    <span>Sea, Air, Road & Courier freight tracking</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span>Supplier Purchase Orders & Production Readiness</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                    <span>Track POL, POD, ETD, ETA, container and vessel IDs</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span>Multi-Currency Sales Calculations (USD, EUR, INR, AED)</span>
                   </li>
                 </ul>
                 <button
-                  onClick={onOpenDemo}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors shadow-sm"
+                  onClick={onOpenLogin}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white text-xs font-semibold rounded-xl transition-all shadow-md shadow-purple-500/20"
                 >
                   View Order Pipeline <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
 
-              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
+              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
                 <table className="w-full text-left text-xs">
                   <thead>
                     <tr className="border-b border-slate-200 text-slate-400 font-semibold uppercase text-[10px]">
@@ -171,24 +171,24 @@ export default function ModuleTabs({ onOpenDemo }) {
                   <tbody className="divide-y divide-slate-100">
                     <tr>
                       <td className="py-2 font-bold text-slate-900">#EXP-9120</td>
-                      <td className="py-2 text-blue-600 font-semibold">Export</td>
+                      <td className="py-2 text-purple-600 font-semibold">Export</td>
                       <td className="py-2 text-slate-600">United States</td>
                       <td className="py-2 font-bold">$42,000</td>
-                      <td className="py-2"><span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-semibold">Shipped</span></td>
+                      <td className="py-2"><span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] font-semibold">Completed</span></td>
                     </tr>
                     <tr>
                       <td className="py-2 font-bold text-slate-900">#IMP-3318</td>
                       <td className="py-2 text-purple-600 font-semibold">Import</td>
                       <td className="py-2 text-slate-600">Germany</td>
                       <td className="py-2 font-bold">€28,500</td>
-                      <td className="py-2"><span className="px-2 py-0.5 bg-amber-50 text-amber-700 rounded text-[10px] font-semibold">In Transit</span></td>
+                      <td className="py-2"><span className="px-2 py-0.5 bg-amber-50 text-amber-700 rounded text-[10px] font-semibold">Processing</span></td>
                     </tr>
                     <tr>
                       <td className="py-2 font-bold text-slate-900">#EXP-9121</td>
-                      <td className="py-2 text-blue-600 font-semibold">Export</td>
+                      <td className="py-2 text-purple-600 font-semibold">Export</td>
                       <td className="py-2 text-slate-600">Dubai (UAE)</td>
                       <td className="py-2 font-bold">AED 65,000</td>
-                      <td className="py-2"><span className="px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] font-semibold">Confirmed</span></td>
+                      <td className="py-2"><span className="px-2 py-0.5 bg-purple-50 text-purple-700 rounded text-[10px] font-semibold">Confirmed</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -200,7 +200,7 @@ export default function ModuleTabs({ onOpenDemo }) {
           {activeTab === 'finance' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <h3 className="text-2xl font-bold text-brand-navy">
+                <h3 className="text-2xl font-bold text-slate-900">
                   Invoices & Financial Auditing
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -208,21 +208,21 @@ export default function ModuleTabs({ onOpenDemo }) {
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Multi-currency invoices in USD, EUR, INR, AED, GBP, CNY</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Payment statuses: Pending, Partially Paid, Paid, Overdue</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                    <span>Accurate profit calculation per shipment</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <span>Accurate margin calculation per order fulfillment</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-3">
+              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-bold text-slate-900">Invoice #INV-2026-094</span>
                   <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">PAID IN FULL</span>
@@ -241,7 +241,7 @@ export default function ModuleTabs({ onOpenDemo }) {
           {activeTab === 'partners' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <h3 className="text-2xl font-bold text-brand-navy">
+                <h3 className="text-2xl font-bold text-slate-900">
                   Global Customers & Suppliers Directory
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -249,29 +249,29 @@ export default function ModuleTabs({ onOpenDemo }) {
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Partner dossiers with tax IDs, addresses & contacts</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Payment terms: Net 30, Advance, LC at Sight</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Lifetime order volume and history</span>
                   </li>
                 </ul>
               </div>
 
               <div className="lg:col-span-6 space-y-3">
-                <div className="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-4 shadow-sm">
-                  <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">US</div>
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 shadow-sm">
+                  <div className="w-9 h-9 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs">US</div>
                   <div>
                     <div className="text-xs sm:text-sm font-bold text-slate-900">Atlantic Global Imports LLC</div>
                     <div className="text-[11px] text-slate-500">United States &bull; USD ($) &bull; Terms: LC 60 Days</div>
                   </div>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-4 shadow-sm">
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-4 shadow-sm">
                   <div className="w-9 h-9 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs">AE</div>
                   <div>
                     <div className="text-xs sm:text-sm font-bold text-slate-900">Al-Khaleej Trading Corp</div>
@@ -286,7 +286,7 @@ export default function ModuleTabs({ onOpenDemo }) {
           {activeTab === 'inventory' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 space-y-5">
-                <h3 className="text-2xl font-bold text-brand-navy">
+                <h3 className="text-2xl font-bold text-slate-900">
                   Inventory & HS Code Catalog
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -294,24 +294,24 @@ export default function ModuleTabs({ onOpenDemo }) {
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Harmonized Tariff (HS Code) classification</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Stock-in (import arrival) & Stock-out (export dispatch)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
                     <span>Low inventory threshold notifications</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-3">
+              <div className="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-bold text-slate-900">Basmati Rice Premium (50kg)</span>
-                  <span className="px-2 py-0.5 bg-blue-50 text-blue-700 rounded font-semibold text-xs">HS: 1006.30.20</span>
+                  <span className="px-2 py-0.5 bg-purple-50 text-purple-700 rounded font-semibold text-xs border border-purple-100">HS: 1006.30.20</span>
                 </div>
                 <div className="text-xs text-slate-500 space-y-1">
                   <div>Current In Stock: <strong>1,450 Bags</strong></div>

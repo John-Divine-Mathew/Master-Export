@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, FileText, Download, CheckCircle2 } from 'lucide-react';
+import { X, FileText, Download } from 'lucide-react';
 
 export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload }) {
   if (!isOpen) return null;
@@ -58,8 +58,8 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
   const sample = docSamples[docTitle] || docSamples['Commercial Invoice'];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fadeIn">
-      <div className="bg-white rounded-3xl p-8 w-full max-w-lg shadow-2xl relative border border-slate-100 animate-scaleUp">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
+      <div className="bg-white rounded-3xl p-8 w-full max-w-lg shadow-2xl relative border border-purple-100 animate-scaleUp">
         
         {/* Close Button */}
         <button
@@ -72,28 +72,28 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
 
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-500 mx-auto flex items-center justify-center mb-3">
+          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 mx-auto flex items-center justify-center mb-3">
             <FileText className="w-6 h-6" />
           </div>
-          <h3 className="text-xl font-black text-brand-navy">{docTitle}</h3>
+          <h3 className="text-xl font-black text-slate-900">{docTitle}</h3>
           <p className="text-xs text-slate-500 mt-0.5">{sample.sub}</p>
         </div>
 
         {/* Document Template Container */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs text-slate-600 space-y-3 mb-6 font-mono">
-          <div className="flex justify-between items-center pb-2 border-b border-slate-200 text-brand-navy font-bold">
+        <div className="bg-purple-50/20 border border-purple-100 rounded-2xl p-5 text-xs text-slate-600 space-y-3 mb-6 font-mono">
+          <div className="flex justify-between items-center pb-2 border-b border-purple-100 text-slate-900 font-bold">
             <span>{sample.shipper}</span>
-            <span className="text-blue-600">REF: {sample.invNo}</span>
+            <span className="text-purple-600">REF: {sample.invNo}</span>
           </div>
 
           <div><strong>Buyer / Consignee:</strong> {sample.consignee}</div>
           <div><strong>Delivery & Terms:</strong> {sample.terms}</div>
 
-          <div className="pt-2 border-t border-dashed border-slate-300 space-y-1">
+          <div className="pt-2 border-t border-dashed border-purple-200 space-y-1">
             <div><strong>Item Description:</strong> {sample.item}</div>
             <div><strong>HS / Code:</strong> {sample.hsCode}</div>
             <div><strong>Quantity / Weight:</strong> {sample.qty}</div>
-            <div className="text-brand-navy font-bold pt-1 text-sm">
+            <div className="text-slate-900 font-bold pt-1 text-sm">
               Total Valuation: {sample.total}
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
             onDownload(`Generated PDF for ${docTitle}`);
             onClose();
           }}
-          className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-brand-navy hover:to-blue-700 text-white font-bold rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2"
+          className="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-purple-500/25 flex items-center justify-center gap-2"
         >
           <Download className="w-4 h-4" />
           <span>Download Sample PDF Form</span>

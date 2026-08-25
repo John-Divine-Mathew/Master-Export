@@ -4,33 +4,39 @@
 
 @layer base {
   body {
-    @apply bg-white text-slate-800 font-sans;
+    @apply bg-white text-slate-800 font-sans antialiased;
   }
 }
 
 /* Glassmorphism & Custom Accents */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .gradient-brand {
-  background: linear-gradient(135deg, #0b1f44 0%, #0066cc 50%, #0284c7 100%);
+  background: linear-gradient(135deg, #18132b 0%, #6d28d9 50%, #7c3aed 100%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0b1f44 0%, #0066cc 60%, #0284c7 100%);
+  background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-purple-hero {
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 50%, #e9d5ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(2, 132, 199, 0.3);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
   }
   50% {
-    box-shadow: 0 0 30px rgba(2, 132, 199, 0.6);
+    box-shadow: 0 0 35px rgba(124, 58, 237, 0.5);
   }
 }
 
