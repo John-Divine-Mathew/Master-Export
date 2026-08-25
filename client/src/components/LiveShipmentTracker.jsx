@@ -61,25 +61,25 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+    <div className="bg-white rounded-2xl p-5 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between w-full overflow-hidden">
       <div>
         {/* Header */}
-        <div className="flex items-center gap-3 pb-5 border-b border-slate-100 mb-6">
-          <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+        <div className="flex items-center gap-3 pb-5 border-b border-slate-100 mb-5 sm:mb-6">
+          <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold shrink-0">
             <Ship className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-brand-navy">Shipment Tracker</h3>
+            <h3 className="text-base sm:text-lg font-bold text-brand-navy">Shipment Tracker</h3>
             <p className="text-xs text-slate-500">Live multi-modal container & cargo status</p>
           </div>
         </div>
 
-        {/* Search / Select Bar */}
-        <div className="flex gap-2 mb-6">
+        {/* Responsive Search / Select Bar */}
+        <div className="flex flex-col sm:flex-row gap-2 mb-5 sm:mb-6 w-full">
           <select
             value={selectedKey}
             onChange={(e) => setSelectedKey(e.target.value)}
-            className="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+            className="w-full sm:flex-1 min-w-0 px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
           >
             <option value="EXP-8891">Order #ME-EXP-8891 (Mundra to Dubai - Sea)</option>
             <option value="IMP-4022">Order #ME-IMP-4022 (Frankfurt to Chennai - Air)</option>
@@ -87,34 +87,34 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
           </select>
           <button
             onClick={handleTrack}
-            className="px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg flex items-center gap-1.5 transition-colors shadow-sm"
+            className="w-full sm:w-auto shrink-0 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm"
           >
             <Search className="w-3.5 h-3.5" />
             <span>Track</span>
           </button>
         </div>
 
-        {/* Shipment Details Box */}
-        <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-4 mb-5">
-          <div className="grid grid-cols-3 gap-3 text-xs mb-3">
-            <div>
-              <span className="block text-[10px] font-semibold text-slate-400 uppercase">Shipment ID</span>
-              <strong className="text-slate-900 font-bold">{currentShipment.id}</strong>
+        {/* Responsive Shipment Details Card */}
+        <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 sm:p-4 mb-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 text-xs mb-3">
+            <div className="bg-white/80 p-2 rounded-lg border border-slate-200/60 sm:bg-transparent sm:p-0 sm:border-0">
+              <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Shipment ID</span>
+              <strong className="text-slate-900 font-bold text-xs sm:text-sm break-all">{currentShipment.id}</strong>
             </div>
-            <div>
-              <span className="block text-[10px] font-semibold text-slate-400 uppercase">Carrier / Vessel</span>
-              <strong className="text-slate-900 font-bold truncate block">{currentShipment.vessel}</strong>
+            <div className="bg-white/80 p-2 rounded-lg border border-slate-200/60 sm:bg-transparent sm:p-0 sm:border-0">
+              <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Carrier / Vessel</span>
+              <strong className="text-slate-900 font-bold text-xs sm:text-sm truncate block">{currentShipment.vessel}</strong>
             </div>
-            <div>
-              <span className="block text-[10px] font-semibold text-slate-400 uppercase">Container / AWB</span>
-              <strong className="text-slate-900 font-bold truncate block">{currentShipment.container}</strong>
+            <div className="bg-white/80 p-2 rounded-lg border border-slate-200/60 sm:bg-transparent sm:p-0 sm:border-0">
+              <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Container / AWB</span>
+              <strong className="text-slate-900 font-bold text-xs sm:text-sm break-all sm:truncate block">{currentShipment.container}</strong>
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-xs font-medium text-slate-600 pt-2.5 border-t border-slate-200">
-            <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-blue-600" /> {currentShipment.origin}</span>
+          <div className="flex flex-wrap items-center justify-between gap-1.5 text-xs font-medium text-slate-600 pt-2.5 border-t border-slate-200">
+            <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" /> <span className="truncate">{currentShipment.origin}</span></span>
             <span className="text-blue-600 font-bold">&rarr;</span>
-            <span className="flex items-center gap-1"><Anchor className="w-3.5 h-3.5 text-sky-600" /> {currentShipment.destination}</span>
+            <span className="flex items-center gap-1"><Anchor className="w-3.5 h-3.5 text-sky-600 shrink-0" /> <span className="truncate">{currentShipment.destination}</span></span>
           </div>
         </div>
 

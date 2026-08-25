@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import WhyThisERP from './components/WhyThisERP';
 import Workflow from './components/Workflow';
 import LiveProfitEngine from './components/LiveProfitEngine';
 import LiveShipmentTracker from './components/LiveShipmentTracker';
@@ -52,7 +53,10 @@ export default function App() {
       {/* Core Features Grid */}
       <Features />
 
-      {/* 5-Step Trade Workflow */}
+      {/* Why This ERP - Tangible Business Value */}
+      <WhyThisERP />
+
+      {/* 6-Stage Business Workflow */}
       <Workflow />
 
       {/* Interactive Live Tools (Profit Engine & Shipment Tracker) */}

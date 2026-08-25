@@ -53,10 +53,10 @@ export default function LiveProfitEngine() {
   const symbol = currencySymbols[currency] || '$';
 
   return (
-    <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+    <div className="bg-white rounded-2xl p-5 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between w-full overflow-hidden">
       <div>
         {/* Header */}
-        <div className="flex items-center gap-3 pb-5 border-b border-slate-100 mb-6">
+        <div className="flex items-center gap-3 pb-5 border-b border-slate-100 mb-5 sm:mb-6">
           <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
             <Calculator className="w-5 h-5" />
           </div>
