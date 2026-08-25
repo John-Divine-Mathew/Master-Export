@@ -12,56 +12,56 @@ export default function Navbar({ onOpenLogin, onOpenDemo }) {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        
+
         {/* Brand Logo - Uses the authentic Master Export emblem & text cleanly without duplicate labels */}
         <a href="#" className="flex items-center group shrink-0">
-          <img 
-            src={logoImg} 
-            alt="Master Export - Connecting Global Markets" 
+          <img
+            src={logoImg}
+            alt="Master Export - Connecting Global Markets"
             className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </a>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-7">
-          <a 
-            href="#features" 
+          <a
+            href="#features"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             Features
           </a>
-          <a 
-            href="#workflow" 
+          <a
+            href="#workflow"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             Trade Flow
           </a>
-          <a 
-            href="#simulator" 
+          <a
+            href="#simulator"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             Live Simulator
           </a>
-          <a 
-            href="#modules" 
+          <a
+            href="#modules"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             ERP Modules
           </a>
-          <a 
-            href="#documents" 
+          <a
+            href="#documents"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             Documents
           </a>
-          <a 
-            href="#pricing" 
+          <a
+            href="#pricing"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             Pricing
           </a>
-          <a 
-            href="#faq" 
+          <a
+            href="#faq"
             className="text-[13.5px] font-semibold text-slate-600 hover:text-blue-600 transition-colors"
           >
             FAQ
@@ -107,56 +107,56 @@ export default function Navbar({ onOpenLogin, onOpenDemo }) {
       {/* Mobile Drawer */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 space-y-3 shadow-xl max-h-[85vh] overflow-y-auto">
-          <a 
-            href="#features" 
+          <a
+            href="#features"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             Features
           </a>
-          <a 
-            href="#workflow" 
+          <a
+            href="#workflow"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             Trade Flow Pipeline
           </a>
-          <a 
-            href="#simulator" 
+          <a
+            href="#simulator"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             Live Simulator (Profit & Tracking)
           </a>
-          <a 
-            href="#modules" 
+          <a
+            href="#modules"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             ERP Modules
           </a>
-          <a 
-            href="#documents" 
+          <a
+            href="#documents"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             Trade Documents Vault
           </a>
-          <a 
-            href="#pricing" 
+          <a
+            href="#pricing"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             Pricing & Deployment
           </a>
-          <a 
-            href="#faq" 
+          <a
+            href="#faq"
             onClick={handleNavClick}
             className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600 border-b border-slate-100"
           >
             FAQ
           </a>
-          
+
           <div className="pt-4 flex flex-col gap-2.5">
             <button
               onClick={() => { setMobileOpen(false); onOpenLogin(); }}

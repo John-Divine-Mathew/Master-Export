@@ -6,6 +6,7 @@ import WhyThisERP from './components/WhyThisERP';
 import Workflow from './components/Workflow';
 import LiveProfitEngine from './components/LiveProfitEngine';
 import LiveShipmentTracker from './components/LiveShipmentTracker';
+import RealTimeVisibility from './components/RealTimeVisibility';
 import ModuleTabs from './components/ModuleTabs';
 import DocumentVault from './components/DocumentVault';
 import Testimonials from './components/Testimonials';
@@ -82,6 +83,9 @@ export default function App() {
 
         </div>
       </section>
+
+      {/* 360° Real-Time Operational & Financial Visibility Feed */}
+      <RealTimeVisibility />
 
       {/* In-Depth ERP Module Tabs */}
       <ModuleTabs onOpenDemo={() => setDemoOpen(true)} />
