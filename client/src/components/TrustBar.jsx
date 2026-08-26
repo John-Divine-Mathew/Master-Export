@@ -12,7 +12,7 @@ export default function TrustBar() {
   ];
 
   return (
-    <div className="bg-slate-900 border-y border-slate-800 text-slate-300 py-6 px-4">
+    <div className="bg-[#000F2E] border-y border-[#001848] text-slate-300 py-6 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-4">
           <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
@@ -26,9 +26,9 @@ export default function TrustBar() {
             return (
               <div 
                 key={idx} 
-                className="flex items-center gap-3 p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-blue-500/40 transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-xl bg-[#001848]/60 border border-[#004EAB]/25 hover:border-[#004EAB]/60 transition-colors"
               >
-                <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-sky-400 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#004EAB]/20 text-[#8FBDF3] flex items-center justify-center shrink-0">
                   <Icon className="w-4 h-4" />
                 </div>
                 <div className="truncate">

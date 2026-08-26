@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
 import WhyThisERP from './components/WhyThisERP';
 import Workflow from './components/Workflow';
 import ModuleTabs from './components/ModuleTabs';
@@ -34,7 +33,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col selection:bg-purple-600 selection:text-white">
+    <div className="min-h-screen bg-white flex flex-col selection:bg-[#004EAB] selection:text-white">
       {/* Navigation Bar */}
       <Navbar 
         onOpenLogin={() => setLoginOpen(true)} 
@@ -44,9 +43,6 @@ export default function App() {
       <Hero 
         onOpenLogin={() => setLoginOpen(true)} 
       />
-
-      {/* Comprehensive ERP Architecture */}
-      <Features />
 
       {/* Why Trading Companies Choose Master Export */}
       <WhyThisERP />

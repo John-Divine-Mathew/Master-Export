@@ -65,11 +65,11 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
       <div>
         {/* Header */}
         <div className="flex items-center gap-3 pb-5 border-b border-slate-100 mb-5 sm:mb-6">
-          <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] flex items-center justify-center font-bold shrink-0">
             <Ship className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-base sm:text-lg font-bold text-brand-navy">Shipment Tracker</h3>
+            <h3 className="text-base sm:text-lg font-bold text-slate-900">Shipment Tracker</h3>
             <p className="text-xs text-slate-500">Live multi-modal container & cargo status</p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
           <select
             value={selectedKey}
             onChange={(e) => setSelectedKey(e.target.value)}
-            className="w-full sm:flex-1 min-w-0 px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+            className="w-full sm:flex-1 min-w-0 px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
           >
             <option value="EXP-8891">Order #ME-EXP-8891 (Mundra to Dubai - Sea)</option>
             <option value="IMP-4022">Order #ME-IMP-4022 (Frankfurt to Chennai - Air)</option>
@@ -87,7 +87,7 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
           </select>
           <button
             onClick={handleTrack}
-            className="w-full sm:w-auto shrink-0 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm"
+            className="w-full sm:w-auto shrink-0 px-4 py-2.5 bg-[#004EAB] hover:bg-[#003E8A] text-white text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm"
           >
             <Search className="w-3.5 h-3.5" />
             <span>Track</span>
@@ -112,9 +112,9 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-1.5 text-xs font-medium text-slate-600 pt-2.5 border-t border-slate-200">
-            <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" /> <span className="truncate">{currentShipment.origin}</span></span>
-            <span className="text-blue-600 font-bold">&rarr;</span>
-            <span className="flex items-center gap-1"><Anchor className="w-3.5 h-3.5 text-sky-600 shrink-0" /> <span className="truncate">{currentShipment.destination}</span></span>
+            <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-[#004EAB] shrink-0" /> <span className="truncate">{currentShipment.origin}</span></span>
+            <span className="text-[#004EAB] font-bold">&rarr;</span>
+            <span className="flex items-center gap-1"><Anchor className="w-3.5 h-3.5 text-[#4D96EB] shrink-0" /> <span className="truncate">{currentShipment.destination}</span></span>
           </div>
         </div>
 
@@ -127,7 +127,7 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
                   step.done 
                     ? 'bg-emerald-500 text-white' 
                     : step.current 
-                    ? 'bg-blue-600 ring-2 ring-blue-100 text-white' 
+                    ? 'bg-[#004EAB] ring-2 ring-[#BCD8F8] text-white' 
                     : 'bg-slate-300'
                 }`}
               >
@@ -142,7 +142,7 @@ export default function LiveShipmentTracker({ onTriggerToast }) {
       </div>
 
       <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-        <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-blue-600" /> Estimated Arrival:</span>
+        <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-[#004EAB]" /> Estimated Arrival:</span>
         <strong className="text-slate-900 font-bold">{currentShipment.eta}</strong>
       </div>
     </div>

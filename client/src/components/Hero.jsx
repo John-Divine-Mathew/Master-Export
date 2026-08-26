@@ -16,19 +16,19 @@ export default function Hero({ onOpenLogin }) {
         style={{ backgroundImage: `url(${heroImg})` }}
       />
 
-      {/* Premium Dark Overlay with Subtle Deep Violet Undertone */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#090714]/90 via-[#0f0c1b]/80 to-[#18132b]/95 backdrop-blur-[1px]" />
+      {/* Premium Dark Overlay with Exact Navy Undertone */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#000F2E]/90 via-[#001848]/85 to-[#061325]/95 backdrop-blur-[1px]" />
 
-      {/* Ambient Purple / Lavender Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-purple-600/20 blur-3xl pointer-events-none -z-0" />
+      {/* Ambient Logo Blue Radial Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-[#004EAB]/25 blur-3xl pointer-events-none -z-0" />
 
       {/* Centered Minimal Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-22 flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-18 flex flex-col items-center justify-center text-center">
         
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.14] max-w-3xl mx-auto">
           Global Trade Operations,{' '}
-          <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-200 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#BCD8F8] via-[#8FBDF3] to-white bg-clip-text text-transparent">
             Simplified.
           </span>
         </h1>
@@ -42,7 +42,7 @@ export default function Hero({ onOpenLogin }) {
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
           <button
             onClick={onOpenLogin}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 rounded-xl transition-all shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-xl transition-all shadow-xl shadow-[#004EAB]/30 hover:shadow-[#004EAB]/50 transform hover:-translate-y-0.5"
           >
             <Lock className="w-4 h-4" />
             <span>Login to ERP</span>
@@ -51,9 +51,9 @@ export default function Hero({ onOpenLogin }) {
           
           <a
             href="#modules"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 rounded-xl transition-all shadow-md hover:border-white/40"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 rounded-xl transition-all shadow-md hover:border-[#BCD8F8]/40"
           >
-            <Layers className="w-4 h-4 text-purple-300" />
+            <Layers className="w-4 h-4 text-[#8FBDF3]" />
             <span>Explore ERP Modules</span>
           </a>
         </div>

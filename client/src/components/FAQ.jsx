@@ -28,31 +28,31 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-purple-50/20 scroll-mt-20" id="faq">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 bg-[#EBF3FC]/30 scroll-mt-20 border-b border-[#BCD8F8]/40" id="faq">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-purple-600 mb-2 block">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#004EAB] mb-2 block">
             Frequently Asked Questions
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
             Got Questions? We Have Answers
           </h2>
-          <p className="mt-4 text-base text-slate-600">
-            Everything you need to know about Master Export ERP and how it simplifies international trade.
+          <p className="mt-2 text-xs sm:text-sm text-slate-600">
+            Everything you need to know about Master Export Pro and how it simplifies international trade.
           </p>
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div 
                 key={idx}
                 className={`border rounded-2xl transition-all duration-200 overflow-hidden ${
-                  isOpen ? 'border-purple-300 bg-purple-50/40 shadow-sm' : 'border-slate-200 bg-white hover:border-purple-200'
+                  isOpen ? 'border-[#BCD8F8] bg-[#EBF3FC]/50 shadow-2xs' : 'border-slate-200 bg-white hover:border-[#BCD8F8]'
                 }`}
               >
                 <button
@@ -63,14 +63,14 @@ export default function FAQ() {
                     {faq.q}
                   </span>
                   <ChevronDown 
-                    className={`w-5 h-5 text-purple-600 transition-transform duration-200 flex-shrink-0 ${
+                    className={`w-5 h-5 text-[#004EAB] transition-transform duration-200 flex-shrink-0 ${
                       isOpen ? 'transform rotate-180' : ''
                     }`} 
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-purple-100/60 pt-4">
+                  <div className="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-[#BCD8F8]/40 pt-4">
                     {faq.a}
                   </div>
                 )}

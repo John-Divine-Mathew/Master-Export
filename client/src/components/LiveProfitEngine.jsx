@@ -57,11 +57,11 @@ export default function LiveProfitEngine() {
       <div>
         {/* Header */}
         <div className="flex items-center gap-3 pb-5 border-b border-slate-100 mb-5 sm:mb-6">
-          <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+          <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] flex items-center justify-center font-bold">
             <Calculator className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-brand-navy">Export Profit Engine</h3>
+            <h3 className="text-lg font-bold text-slate-900">Export Profit Engine</h3>
             <p className="text-xs text-slate-500">Calculate net margins with instant currency conversion</p>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function LiveProfitEngine() {
               <select
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
               >
                 <option value="USD">USD ($) - US Dollar</option>
                 <option value="EUR">EUR (€) - Euro</option>
@@ -95,7 +95,7 @@ export default function LiveProfitEngine() {
                 type="number"
                 value={sellingPrice}
                 onChange={(e) => setSellingPrice(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function LiveProfitEngine() {
                 type="number"
                 value={productCost}
                 onChange={(e) => setProductCost(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function LiveProfitEngine() {
                 type="number"
                 value={freight}
                 onChange={(e) => setFreight(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
               />
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function LiveProfitEngine() {
                 type="number"
                 value={insurance}
                 onChange={(e) => setInsurance(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
               />
             </div>
 
@@ -147,7 +147,7 @@ export default function LiveProfitEngine() {
                 type="number"
                 value={customs}
                 onChange={(e) => setCustoms(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:border-[#004EAB] focus:outline-none"
               />
             </div>
           </div>

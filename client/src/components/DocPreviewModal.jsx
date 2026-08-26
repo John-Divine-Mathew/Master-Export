@@ -59,7 +59,7 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
-      <div className="bg-white rounded-3xl p-8 w-full max-w-lg shadow-2xl relative border border-purple-100 animate-scaleUp">
+      <div className="bg-white rounded-3xl p-8 w-full max-w-lg shadow-2xl relative border border-[#BCD8F8]/60 animate-scaleUp">
         
         {/* Close Button */}
         <button
@@ -72,7 +72,7 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
 
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 mx-auto flex items-center justify-center mb-3">
+          <div className="w-12 h-12 rounded-2xl bg-[#EBF3FC] text-[#004EAB] mx-auto flex items-center justify-center mb-3">
             <FileText className="w-6 h-6" />
           </div>
           <h3 className="text-xl font-black text-slate-900">{docTitle}</h3>
@@ -80,16 +80,16 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
         </div>
 
         {/* Document Template Container */}
-        <div className="bg-purple-50/20 border border-purple-100 rounded-2xl p-5 text-xs text-slate-600 space-y-3 mb-6 font-mono">
-          <div className="flex justify-between items-center pb-2 border-b border-purple-100 text-slate-900 font-bold">
+        <div className="bg-[#EBF3FC]/30 border border-[#BCD8F8]/60 rounded-2xl p-5 text-xs text-slate-600 space-y-3 mb-6 font-mono">
+          <div className="flex justify-between items-center pb-2 border-b border-[#BCD8F8]/50 text-slate-900 font-bold">
             <span>{sample.shipper}</span>
-            <span className="text-purple-600">REF: {sample.invNo}</span>
+            <span className="text-[#004EAB]">REF: {sample.invNo}</span>
           </div>
 
           <div><strong>Buyer / Consignee:</strong> {sample.consignee}</div>
           <div><strong>Delivery & Terms:</strong> {sample.terms}</div>
 
-          <div className="pt-2 border-t border-dashed border-purple-200 space-y-1">
+          <div className="pt-2 border-t border-dashed border-[#BCD8F8] space-y-1">
             <div><strong>Item Description:</strong> {sample.item}</div>
             <div><strong>HS / Code:</strong> {sample.hsCode}</div>
             <div><strong>Quantity / Weight:</strong> {sample.qty}</div>
@@ -104,7 +104,7 @@ export default function DocPreviewModal({ isOpen, onClose, docTitle, onDownload 
             onDownload(`Generated PDF for ${docTitle}`);
             onClose();
           }}
-          className="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-purple-500/25 flex items-center justify-center gap-2"
+          className="w-full py-3 px-4 bg-[#004EAB] hover:bg-[#003E8A] text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-[#004EAB]/25 flex items-center justify-center gap-2"
         >
           <Download className="w-4 h-4" />
           <span>Download Sample PDF Form</span>

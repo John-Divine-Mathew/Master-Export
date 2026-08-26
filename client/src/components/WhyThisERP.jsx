@@ -5,7 +5,7 @@ import {
   Receipt, 
   TrendingUp, 
   ShieldCheck,
-  CheckCircle2,
+  CheckCircle2, 
   PackageCheck
 } from 'lucide-react';
 
@@ -13,76 +13,79 @@ export default function WhyThisERP() {
   const benefits = [
     {
       icon: Layers,
-      title: "Unified Trade Management",
-      desc: "Consolidate international sales orders, supplier procurement, and customer records into one single-admin platform.",
+      title: "Unified Trade Hub",
+      desc: "Centralize export sales orders, international procurement, and partner directories in one single-admin platform.",
       stat: "100% Unified"
     },
     {
       icon: FileCheck2,
-      title: "Automated Trade Documentation",
-      desc: "Generate audit-ready Commercial Invoices, Packing Lists, and Certificates of Origin in seconds without manual entry.",
+      title: "1-Click Trade Documents",
+      desc: "Generate audit-ready Commercial Invoices, Packing Lists, and Certificates of Origin in seconds without manual errors.",
       stat: "Under 2 Mins"
     },
     {
       icon: Receipt,
-      title: "Payment & Invoice Tracking",
-      desc: "Monitor buyer wire remittances, supplier payables, and Letter of Credit milestones with zero accounting discrepancies.",
+      title: "Payment & Remittance",
+      desc: "Track buyer wire remittances, supplier payables, and Letter of Credit milestones with zero accounting discrepancies.",
       stat: "Zero Errors"
     },
     {
       icon: TrendingUp,
-      title: "Multi-Currency Financials",
-      desc: "Accurate multi-currency margin visibility with real-time conversion rates across USD, EUR, INR, AED, GBP, and CNY.",
+      title: "Multi-Currency Forex",
+      desc: "Real-time margin visibility with live exchange rate conversions across USD, EUR, INR, AED, GBP, and CNY.",
       stat: "Live Forex"
     },
     {
       icon: PackageCheck,
-      title: "Catalog & HS Code Management",
-      desc: "Maintain structured product inventories with standardized HS code mappings, unit measurements, and pricing tiers.",
+      title: "HS Codes & Inventory",
+      desc: "Maintain structured product catalogs with standardized HS code classifications, unit pricing, and stock alerts.",
       stat: "Standardized"
     },
     {
       icon: ShieldCheck,
-      title: "Total Operational Control",
-      desc: "Bank-grade data security, complete audit trails, and streamlined customs records for complete peace of mind.",
+      title: "Bank-Grade Compliance",
+      desc: "Enterprise data encryption, immutable audit trails, and strict customs standards for complete operational confidence.",
       stat: "Enterprise Safe"
     }
   ];
 
   return (
-    <section className="py-14 sm:py-18 bg-white scroll-mt-20" id="why-us">
+    <section className="py-12 sm:py-16 bg-slate-50/60 scroll-mt-20 border-b border-slate-200/60" id="why-us">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#004EAB] block mb-2">
+            Why Master Export Pro
+          </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
-            Why Trading Companies Choose Master Export
+            Built Exclusively for Global Trade Operations
           </h2>
-          <p className="mt-2.5 text-xs sm:text-sm text-slate-600 font-normal">
-            Engineered to remove friction from international trade, reduce manual work, and protect margins.
+          <p className="mt-2 text-xs sm:text-sm text-slate-600 font-normal">
+            Engineered to eliminate paperwork bottlenecks, protect profit margins, and accelerate international shipments.
           </p>
         </div>
 
-        {/* 6 Benefit Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {/* 6 High-Impact Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {benefits.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div 
                 key={idx}
-                className="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-purple-300 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-200 flex flex-col justify-between"
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 hover:border-[#BCD8F8] hover:shadow-lg hover:shadow-[#004EAB]/5 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 font-bold flex items-center justify-center shadow-sm">
+                  <div className="flex items-center justify-between mb-3.5">
+                    <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] font-bold flex items-center justify-center shadow-2xs">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-100">
+                    <span className="text-[11px] font-bold text-[#004EAB] bg-[#EBF3FC] px-2.5 py-0.5 rounded-full border border-[#BCD8F8]">
                       {item.stat}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 mb-2">
+                  <h3 className="text-base font-bold text-slate-900 mb-1.5">
                     {item.title}
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -90,7 +93,7 @@ export default function WhyThisERP() {
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-purple-600">
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-[#004EAB]">
                   <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
                   <span className="text-slate-700">Verified Business ROI</span>
                 </div>

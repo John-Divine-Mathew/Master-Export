@@ -37,7 +37,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
 
         {/* Header */}
         <div className="text-center mb-6">
-          <img src={logoImg} alt="Logo" className="h-12 w-auto mx-auto mb-3 object-contain" />
+          <img src={logoImg} alt="Master Export Pro" className="h-12 sm:h-14 w-auto mx-auto mb-3 object-contain" />
           <h3 className="text-xl font-black text-brand-navy">Book a 1-on-1 Product Tour</h3>
           <p className="text-xs text-slate-500 mt-1">See how Master Export ERP automates your international business</p>
         </div>
@@ -54,7 +54,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-brand-navy focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-900 focus:bg-white focus:border-[#004EAB] focus:ring-1 focus:ring-[#004EAB] focus:outline-none"
                 placeholder="e.g. Rajesh Sharma"
               />
             </div>
@@ -67,7 +67,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-brand-navy focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-900 focus:bg-white focus:border-[#004EAB] focus:ring-1 focus:ring-[#004EAB] focus:outline-none"
                 placeholder="e.g. Global Exports Ltd"
               />
             </div>
@@ -83,7 +83,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-brand-navy focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-900 focus:bg-white focus:border-[#004EAB] focus:ring-1 focus:ring-[#004EAB] focus:outline-none"
                 placeholder="rajesh@globalexports.com"
               />
             </div>
@@ -96,7 +96,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-brand-navy focus:bg-white focus:border-blue-600 focus:outline-none"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-900 focus:bg-white focus:border-[#004EAB] focus:ring-1 focus:ring-[#004EAB] focus:outline-none"
                 placeholder="+91 98765 43210"
               />
             </div>
@@ -109,7 +109,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
             <select
               value={tradeType}
               onChange={(e) => setTradeType(e.target.value)}
-              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-brand-navy focus:bg-white focus:border-blue-600 focus:outline-none"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-900 focus:bg-white focus:border-[#004EAB] focus:ring-1 focus:ring-[#004EAB] focus:outline-none"
             >
               <option value="both">Both Export & Import Business</option>
               <option value="export">Merchant / Direct Exporter</option>
@@ -121,7 +121,7 @@ export default function DemoModal({ isOpen, onClose, onDemoScheduled }) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-2 py-3 px-4 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-brand-navy hover:to-blue-700 text-white font-bold rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2"
+            className="w-full mt-2 py-3 px-4 bg-[#004EAB] hover:bg-[#003E8A] text-white font-bold rounded-xl text-sm transition-all shadow-md shadow-[#004EAB]/25 flex items-center justify-center gap-2"
           >
             {loading ? 'Submitting...' : (
               <>

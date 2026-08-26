@@ -10,97 +10,81 @@ export default function Navbar({ onOpenLogin }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all shadow-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 flex items-center justify-between">
         
-        {/* Brand: [Logo] Master Export */}
-        <a href="#" className="flex items-center gap-2.5 group shrink-0">
+        {/* Brand: Master Export Pro Logo (Prominent & Crisp) */}
+        <a href="#" className="flex items-center group shrink-0 py-1">
           <img 
             src={logoImg} 
-            alt="Logo" 
-            className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+            alt="Master Export Pro" 
+            className="h-11 sm:h-13 md:h-14 w-auto max-w-[220px] sm:max-w-[280px] md:max-w-[320px] object-contain transition-transform group-hover:scale-[1.02] drop-shadow-xs"
           />
-          <div className="flex items-center font-black tracking-tight text-xl sm:text-2xl leading-none">
-            <span className="text-slate-900">Master</span>
-            <span className="text-purple-600 ml-1.5">Export</span>
-          </div>
         </a>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-7">
-          <a 
-            href="#features" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
-          >
-            Features
-          </a>
-          <a 
-            href="#why-us" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
-          >
-            Why Master Export
-          </a>
-          <a 
-            href="#workflow" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
-          >
-            Workflow
-          </a>
+        {/* Streamlined Desktop Navigation (Clean & Balanced) */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           <a 
             href="#modules" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
+            className="text-[13.5px] font-semibold text-slate-700 hover:text-[#004EAB] transition-colors"
           >
             ERP Modules
           </a>
           <a 
-            href="#documents" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
+            href="#workflow" 
+            className="text-[13.5px] font-semibold text-slate-700 hover:text-[#004EAB] transition-colors"
           >
-            Documents
+            Workflow
+          </a>
+          <a 
+            href="#documents" 
+            className="text-[13.5px] font-semibold text-slate-700 hover:text-[#004EAB] transition-colors"
+          >
+            Trade Documents
           </a>
           <a 
             href="#pricing" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
+            className="text-[13.5px] font-semibold text-slate-700 hover:text-[#004EAB] transition-colors"
           >
             Pricing
           </a>
           <a 
             href="#faq" 
-            className="text-[13.5px] font-semibold text-slate-600 hover:text-purple-600 transition-colors"
+            className="text-[13.5px] font-semibold text-slate-700 hover:text-[#004EAB] transition-colors"
           >
             FAQ
           </a>
         </nav>
 
         {/* Action Buttons: Login | Sign In */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-2.5">
           <button
             onClick={onOpenLogin}
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-slate-700 hover:text-purple-700 bg-slate-50 hover:bg-purple-50 border border-slate-200 hover:border-purple-200 rounded-xl transition-all shadow-sm"
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-slate-700 hover:text-[#004EAB] bg-slate-50 hover:bg-[#EBF3FC] border border-slate-200 hover:border-[#BCD8F8] rounded-xl transition-all shadow-2xs"
           >
-            <Lock className="w-3.5 h-3.5 text-purple-600" />
+            <Lock className="w-3.5 h-3.5 text-[#004EAB]" />
             <span>Login</span>
           </button>
           <button
             onClick={onOpenLogin}
-            className="inline-flex items-center gap-1.5 px-5 py-2 text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 rounded-xl transition-all shadow-md shadow-purple-500/25 transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-5 py-2 text-xs font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-xl transition-all shadow-md shadow-[#004EAB]/25 transform hover:-translate-y-0.5"
           >
             <LogIn className="w-3.5 h-3.5" />
             <span>Sign In</span>
           </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle & Direct Login */}
         <div className="lg:hidden flex items-center gap-2">
           <button
             onClick={onOpenLogin}
-            className="sm:hidden px-3.5 py-1.5 text-xs font-bold text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-sm"
+            className="sm:hidden px-3 py-1.5 text-xs font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-lg shadow-2xs"
           >
             Login
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 rounded-lg text-slate-700 hover:bg-purple-50 focus:outline-none"
+            className="p-2 rounded-lg text-slate-700 hover:bg-[#EBF3FC] focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <X className="w-6 h-6 text-slate-900" /> : <Menu className="w-6 h-6 text-slate-900" />}
@@ -108,73 +92,59 @@ export default function Navbar({ onOpenLogin }) {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (Responsive & Clean) */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 space-y-3 shadow-xl max-h-[85vh] overflow-y-auto">
-          <a 
-            href="#features" 
-            onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
-          >
-            Features
-          </a>
-          <a 
-            href="#why-us" 
-            onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
-          >
-            Why Master Export
-          </a>
-          <a 
-            href="#workflow" 
-            onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
-          >
-            Business Workflow
-          </a>
+        <div className="lg:hidden bg-white border-b border-slate-200 px-5 pt-3 pb-6 space-y-2.5 shadow-xl max-h-[85vh] overflow-y-auto animate-fadeIn">
           <a 
             href="#modules" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
+            className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-800 hover:bg-[#EBF3FC] hover:text-[#004EAB] transition-colors"
           >
             ERP Modules
           </a>
           <a 
+            href="#workflow" 
+            onClick={handleNavClick}
+            className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-800 hover:bg-[#EBF3FC] hover:text-[#004EAB] transition-colors"
+          >
+            Business Workflow
+          </a>
+          <a 
             href="#documents" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
+            className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-800 hover:bg-[#EBF3FC] hover:text-[#004EAB] transition-colors"
           >
             Trade Documents
           </a>
           <a 
             href="#pricing" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
+            className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-800 hover:bg-[#EBF3FC] hover:text-[#004EAB] transition-colors"
           >
             Pricing & Plans
           </a>
           <a 
             href="#faq" 
             onClick={handleNavClick}
-            className="block py-2.5 text-sm font-semibold text-slate-800 hover:text-purple-600 border-b border-slate-100"
+            className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-800 hover:bg-[#EBF3FC] hover:text-[#004EAB] transition-colors"
           >
-            FAQ
+            FAQ & Support
           </a>
           
-          <div className="pt-4 flex flex-col gap-2.5">
+          <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
             <button
               onClick={() => { setMobileOpen(false); onOpenLogin(); }}
-              className="w-full py-2.5 px-4 text-center text-xs font-bold text-slate-700 bg-purple-50/70 hover:bg-purple-100 text-purple-900 rounded-xl transition-colors flex items-center justify-center gap-1.5"
+              className="w-full py-2.5 px-4 text-center text-xs font-bold text-[#001848] bg-[#EBF3FC] hover:bg-[#D5E6F9] rounded-xl transition-colors flex items-center justify-center gap-1.5"
             >
-              <Lock className="w-3.5 h-3.5 text-purple-600" />
-              <span>Login</span>
+              <Lock className="w-3.5 h-3.5 text-[#004EAB]" />
+              <span>Admin Portal Login</span>
             </button>
             <button
               onClick={() => { setMobileOpen(false); onOpenLogin(); }}
-              className="w-full py-2.5 px-4 text-center text-xs font-bold text-white bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 rounded-xl transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-purple-500/20"
+              className="w-full py-2.5 px-4 text-center text-xs font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-xl transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-[#004EAB]/25"
             >
               <LogIn className="w-3.5 h-3.5" />
-              <span>Sign In</span>
+              <span>Sign In to Dashboard</span>
             </button>
           </div>
         </div>

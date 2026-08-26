@@ -27,17 +27,17 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-14 sm:py-16 bg-[#0f0c1b] text-white relative overflow-hidden">
+    <section className="py-14 sm:py-16 bg-[#000F2E] text-white relative overflow-hidden border-b border-[#001848]">
       
       {/* Background Lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-64 bg-purple-600/15 blur-3xl -z-0 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-64 bg-[#004EAB]/20 blur-3xl -z-0 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Short & Clean Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-600/20 text-purple-300 text-xs font-bold uppercase tracking-wider mb-2.5 border border-purple-500/30">
-            <Star className="w-3.5 h-3.5 fill-purple-300 text-purple-300" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#004EAB]/20 text-[#8FBDF3] text-xs font-bold uppercase tracking-wider mb-2.5 border border-[#004EAB]/40">
+            <Star className="w-3.5 h-3.5 fill-[#8FBDF3] text-[#8FBDF3]" />
             <span>Proven Reliability</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
@@ -53,7 +53,7 @@ export default function Testimonials() {
           {testimonials.map((item, idx) => (
             <div 
               key={idx}
-              className="bg-[#18132b]/70 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-purple-900/40 flex flex-col justify-between hover:border-purple-500/40 transition-all shadow-xl shadow-black/20"
+              className="bg-[#001848]/80 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-[#004EAB]/30 flex flex-col justify-between hover:border-[#004EAB]/60 transition-all shadow-xl shadow-black/20"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -62,7 +62,7 @@ export default function Testimonials() {
                       <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
                     ))}
                   </div>
-                  <span className="text-[10px] font-bold text-purple-300 bg-purple-950/80 border border-purple-500/30 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold text-[#8FBDF3] bg-[#061325]/80 border border-[#004EAB]/40 px-2 py-0.5 rounded-full">
                     {item.metrics}
                   </span>
                 </div>
@@ -72,9 +72,9 @@ export default function Testimonials() {
                 </p>
               </div>
 
-              <div className="mt-5 pt-4 border-t border-purple-900/40">
+              <div className="mt-5 pt-4 border-t border-[#004EAB]/20">
                 <div className="text-xs sm:text-sm font-bold text-white">{item.author}</div>
-                <div className="text-[11px] text-purple-300 font-medium">{item.role} &bull; {item.company}</div>
+                <div className="text-[11px] text-[#8FBDF3] font-medium">{item.role} &bull; {item.company}</div>
               </div>
             </div>
           ))}

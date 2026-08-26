@@ -56,7 +56,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-14 sm:py-18 bg-purple-50/30 scroll-mt-20" id="features">
+    <section className="py-14 sm:py-18 bg-[#EBF3FC]/30 scroll-mt-20" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Clean Header */}
@@ -69,26 +69,26 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Visual Purple / Lavender Feature Cards Grid */}
+        {/* Visual Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {modules.map((item, index) => {
             const Icon = item.icon;
             return (
               <div 
                 key={index}
-                className="group relative bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:shadow-purple-500/5 hover:border-purple-300 transition-all duration-200 flex flex-col justify-between"
+                className="group relative bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:shadow-[#004EAB]/5 hover:border-[#BCD8F8] transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all flex items-center justify-center font-bold shadow-sm">
+                    <div className="w-11 h-11 rounded-xl bg-[#EBF3FC] text-[#004EAB] group-hover:bg-[#004EAB] group-hover:text-white transition-all flex items-center justify-center font-bold shadow-sm">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 group-hover:bg-purple-50 group-hover:text-purple-700 transition-colors">
+                    <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 group-hover:bg-[#EBF3FC] group-hover:text-[#004EAB] transition-colors">
                       {item.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 group-hover:text-purple-600 transition-colors">
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-[#004EAB] transition-colors">
                     {item.title}
                   </h3>
 
@@ -97,7 +97,7 @@ export default function Features() {
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-purple-600">
+                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-[#004EAB]">
                   <span>{item.highlight}</span>
                   <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>

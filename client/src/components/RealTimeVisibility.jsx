@@ -36,16 +36,16 @@ export default function RealTimeVisibility() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-[#000F2E] text-white relative overflow-hidden border-b border-[#001848]">
       
       {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-80 bg-blue-600/10 blur-3xl pointer-events-none -z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-80 bg-[#004EAB]/15 blur-3xl pointer-events-none -z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-600/20 text-sky-400 text-xs font-bold uppercase tracking-wider mb-2.5 border border-blue-500/20">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#004EAB]/20 text-[#8FBDF3] text-xs font-bold uppercase tracking-wider mb-2.5 border border-[#004EAB]/30">
             <Activity className="w-3.5 h-3.5" />
             <span>360° Real-Time Operational Visibility</span>
           </div>
@@ -63,8 +63,8 @@ export default function RealTimeVisibility() {
             onClick={() => setActiveView('shipments')}
             className={`px-4 py-2 text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 ${
               activeView === 'shipments'
-                ? 'bg-blue-600 text-white shadow-md shadow-blue-500/30'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                ? 'bg-[#004EAB] text-white shadow-md shadow-[#004EAB]/30'
+                : 'bg-[#001848] text-slate-300 hover:bg-[#002E68]'
             }`}
           >
             <Ship className="w-3.5 h-3.5" />
@@ -74,8 +74,8 @@ export default function RealTimeVisibility() {
             onClick={() => setActiveView('payments')}
             className={`px-4 py-2 text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 ${
               activeView === 'payments'
-                ? 'bg-blue-600 text-white shadow-md shadow-blue-500/30'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                ? 'bg-[#004EAB] text-white shadow-md shadow-[#004EAB]/30'
+                : 'bg-[#001848] text-slate-300 hover:bg-[#002E68]'
             }`}
           >
             <DollarSign className="w-3.5 h-3.5" />
@@ -85,8 +85,8 @@ export default function RealTimeVisibility() {
             onClick={() => setActiveView('transactions')}
             className={`px-4 py-2 text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 ${
               activeView === 'transactions'
-                ? 'bg-blue-600 text-white shadow-md shadow-blue-500/30'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                ? 'bg-[#004EAB] text-white shadow-md shadow-[#004EAB]/30'
+                : 'bg-[#001848] text-slate-300 hover:bg-[#002E68]'
             }`}
           >
             <CreditCard className="w-3.5 h-3.5" />
@@ -95,7 +95,7 @@ export default function RealTimeVisibility() {
         </div>
 
         {/* Interactive Data Card Display */}
-        <div className="bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-700/80 p-4 sm:p-6 shadow-2xl overflow-hidden">
+        <div className="bg-[#001848]/60 backdrop-blur-md rounded-2xl border border-[#004EAB]/30 p-4 sm:p-6 shadow-2xl overflow-hidden">
           
           {activeView === 'shipments' && (
             <div className="space-y-3">
@@ -103,11 +103,11 @@ export default function RealTimeVisibility() {
                 {liveShipments.map((shp, idx) => (
                   <div 
                     key={idx}
-                    className="bg-slate-900/80 rounded-xl p-4 border border-slate-700/60 flex flex-col justify-between hover:border-blue-500/40 transition-colors"
+                    className="bg-[#001848]/80 rounded-xl p-4 border border-[#004EAB]/30 flex flex-col justify-between hover:border-[#004EAB]/60 transition-colors"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-2.5">
-                        <span className="text-[11px] font-bold text-sky-400">{shp.id}</span>
+                        <span className="text-[11px] font-bold text-[#8FBDF3]">{shp.id}</span>
                         <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                           {shp.status}
@@ -115,11 +115,11 @@ export default function RealTimeVisibility() {
                       </div>
                       <h4 className="text-sm font-bold text-white truncate">{shp.vessel}</h4>
                       <p className="text-xs text-slate-400 mt-1">{shp.route}</p>
-                      <p className="text-[11px] text-slate-500 mt-0.5">{shp.mode}</p>
+                      <p className="text-[11px] text-slate-400 mt-0.5">{shp.mode}</p>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
-                      <span className="text-slate-500">ETA:</span>
+                    <div className="mt-4 pt-3 border-t border-[#004EAB]/20 flex items-center justify-between text-xs text-slate-300">
+                      <span className="text-slate-400">ETA:</span>
                       <strong className="text-white">{shp.eta}</strong>
                     </div>
                   </div>
@@ -134,12 +134,12 @@ export default function RealTimeVisibility() {
                 {pendingPayments.map((pay, idx) => (
                   <div 
                     key={idx}
-                    className="bg-slate-900/80 rounded-xl p-4 border border-slate-700/60 flex flex-col justify-between hover:border-blue-500/40 transition-colors"
+                    className="bg-[#001848]/80 rounded-xl p-4 border border-[#004EAB]/30 flex flex-col justify-between hover:border-[#004EAB]/60 transition-colors"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-2.5">
-                        <span className="text-[11px] font-bold text-sky-400">{pay.invoice}</span>
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-950/80 text-sky-300 border border-sky-500/30">
+                        <span className="text-[11px] font-bold text-[#8FBDF3]">{pay.invoice}</span>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#061325]/80 text-[#8FBDF3] border border-[#004EAB]/40">
                           {pay.status}
                         </span>
                       </div>
@@ -150,8 +150,8 @@ export default function RealTimeVisibility() {
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
-                      <span className="text-slate-500">Terms:</span>
+                    <div className="mt-4 pt-3 border-t border-[#004EAB]/20 flex items-center justify-between text-xs text-slate-300">
+                      <span className="text-slate-400">Terms:</span>
                       <strong className="text-emerald-400">{pay.due}</strong>
                     </div>
                   </div>
@@ -161,11 +161,11 @@ export default function RealTimeVisibility() {
           )}
 
           {activeView === 'transactions' && (
-            <div className="divide-y divide-slate-700/60">
+            <div className="divide-y divide-[#004EAB]/20">
               {recentTransactions.map((tx, idx) => (
                 <div key={idx} className="py-3 sm:py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-sky-400 flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-[#004EAB]/20 text-[#8FBDF3] flex items-center justify-center shrink-0">
                       <TrendingUp className="w-4 h-4" />
                     </div>
                     <div>
@@ -177,7 +177,7 @@ export default function RealTimeVisibility() {
                     <span className={`font-black text-sm ${tx.amount.startsWith('+') ? 'text-emerald-400' : 'text-slate-200'}`}>
                       {tx.amount}
                     </span>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-slate-200">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#001848] text-slate-200 border border-[#004EAB]/30">
                       {tx.status}
                     </span>
                   </div>

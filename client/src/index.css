@@ -1,10 +1,19 @@
+:root {
+  --brand-blue: #004EAB;
+  --brand-blue-hover: #003E8A;
+  --brand-blue-light: #EBF3FC;
+  --brand-blue-border: #BCD8F8;
+  --brand-navy: #001848;
+  --brand-navy-dark: #061325;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-white text-slate-800 font-sans antialiased;
+    @apply bg-white text-slate-800 font-sans antialiased selection:bg-[#004EAB] selection:text-white;
   }
 }
 
@@ -16,27 +25,27 @@
 }
 
 .gradient-brand {
-  background: linear-gradient(135deg, #18132b 0%, #6d28d9 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #001848 0%, #004EAB 60%, #1D78E2 100%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a855f7 100%);
+  background: linear-gradient(135deg, #001848 0%, #004EAB 60%, #1D78E2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-purple-hero {
-  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 50%, #e9d5ff 100%);
+.gradient-blue-hero {
+  background: linear-gradient(135deg, #BCD8F8 0%, #8FBDF3 50%, #EBF3FC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
+    box-shadow: 0 0 20px rgba(0, 78, 171, 0.25);
   }
   50% {
-    box-shadow: 0 0 35px rgba(124, 58, 237, 0.5);
+    box-shadow: 0 0 35px rgba(0, 78, 171, 0.5);
   }
 }
 
