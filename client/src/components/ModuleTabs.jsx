@@ -10,7 +10,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export default function ModuleTabs({ onOpenLogin }) {
+export default function ModuleTabs() {
   const [activeTab, setActiveTab] = useState('dashboard');
 
   const tabs = [
@@ -83,12 +83,12 @@ export default function ModuleTabs({ onOpenLogin }) {
                     <span>Low Stock Thresholds & Overdue Payment Flags</span>
                   </li>
                 </ul>
-                <button
-                  onClick={onOpenLogin}
+                <a
+                  href="#workflow"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#004EAB] hover:bg-[#003E8A] text-white text-xs font-semibold rounded-xl transition-all shadow-md shadow-[#004EAB]/20"
                 >
                   Explore Dashboard <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
 
               <div className="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
@@ -149,12 +149,12 @@ export default function ModuleTabs({ onOpenLogin }) {
                     <span>Multi-Currency Sales Calculations (USD, EUR, INR, AED)</span>
                   </li>
                 </ul>
-                <button
-                  onClick={onOpenLogin}
+                <a
+                  href="#workflow"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#004EAB] hover:bg-[#003E8A] text-white text-xs font-semibold rounded-xl transition-all shadow-md shadow-[#004EAB]/20"
                 >
                   View Order Pipeline <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
 
               <div className="lg:col-span-6 bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">

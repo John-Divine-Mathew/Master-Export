@@ -5,17 +5,15 @@ import WhyThisERP from './components/WhyThisERP';
 import Workflow from './components/Workflow';
 import ModuleTabs from './components/ModuleTabs';
 import DocumentVault from './components/DocumentVault';
+import DosAndDonts from './components/DosAndDonts';
 import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
-import LoginModal from './components/LoginModal';
 import DocPreviewModal from './components/DocPreviewModal';
 import Toast from './components/Toast';
 
 export default function App() {
-  const [loginOpen, setLoginOpen] = useState(false);
   const [docModalOpen, setDocModalOpen] = useState(false);
   const [selectedDoc, setSelectedDoc] = useState('Commercial Invoice');
   const [toastMessage, setToastMessage] = useState('');
@@ -35,14 +33,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white flex flex-col selection:bg-[#004EAB] selection:text-white">
       {/* Navigation Bar */}
-      <Navbar 
-        onOpenLogin={() => setLoginOpen(true)} 
-      />
+      <Navbar />
 
       {/* Clean Minimal Hero Section */}
-      <Hero 
-        onOpenLogin={() => setLoginOpen(true)} 
-      />
+      <Hero />
 
       {/* Why Trading Companies Choose Master Export */}
       <WhyThisERP />
@@ -51,34 +45,25 @@ export default function App() {
       <Workflow />
 
       {/* In-Depth ERP Module Tabs */}
-      <ModuleTabs onOpenLogin={() => setLoginOpen(true)} />
+      <ModuleTabs />
 
       {/* Trade Document Vault Showcase */}
       <DocumentVault onOpenDocPreview={handleOpenDocPreview} />
 
+      {/* Do's & Don'ts Best Practices Guide */}
+      <DosAndDonts />
+
       {/* Client Success Stories & Social Proof */}
       <Testimonials />
-
-      {/* Pricing & Deployment Plans */}
-      <Pricing onOpenLogin={() => setLoginOpen(true)} />
 
       {/* FAQ Accordion */}
       <FAQ />
 
       {/* Call to Action Banner */}
-      <CTABanner onOpenLogin={() => setLoginOpen(true)} />
+      <CTABanner />
 
       {/* Footer */}
-      <Footer 
-        onOpenLogin={() => setLoginOpen(true)} 
-      />
-
-      {/* Interactive Login Modal */}
-      <LoginModal 
-        isOpen={loginOpen} 
-        onClose={() => setLoginOpen(false)} 
-        onLoginSuccess={showToast}
-      />
+      <Footer />
 
       {/* Document Preview Modal */}
       <DocPreviewModal 
