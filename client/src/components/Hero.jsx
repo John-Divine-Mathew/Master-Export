@@ -130,15 +130,15 @@ export default function Hero() {
         <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-xl transition-all shadow-xl shadow-[#004EAB]/40 hover:shadow-[#004EAB]/60 transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] shimmer-btn rounded-xl transition-all duration-300 shadow-xl shadow-[#004EAB]/40 hover:shadow-[#004EAB]/60 transform hover:-translate-y-1 active:scale-[0.98] group"
           >
             <span>Request ERP Demo</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           
           <a
             href="#workflow"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-bold text-white bg-[#001848]/80 hover:bg-[#001848] backdrop-blur-md border border-white/30 rounded-xl transition-all shadow-lg hover:border-[#BCD8F8]/60"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-bold text-white bg-[#001848]/80 hover:bg-[#001848] backdrop-blur-md border border-white/30 rounded-xl transition-all duration-300 shadow-lg hover:border-[#BCD8F8]/60 hover:-translate-y-0.5"
           >
             <span>Explore Business Workflow</span>
           </a>

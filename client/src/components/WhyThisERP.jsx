@@ -66,26 +66,26 @@ export default function WhyThisERP() {
           </p>
         </div>
 
-        {/* 6 High-Impact Cards */}
+        {/* 6 High-Impact Cards with Smooth Hover-Lift & Micro-Transitions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {benefits.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div 
                 key={idx}
-                className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 hover:border-[#BCD8F8] hover:shadow-lg hover:shadow-[#004EAB]/5 transition-all duration-200 flex flex-col justify-between"
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/10 hover-lift transition-all duration-300 flex flex-col justify-between group cursor-default"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] font-bold flex items-center justify-center shadow-2xs">
+                    <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] font-bold flex items-center justify-center shadow-2xs group-hover:scale-110 group-hover:bg-[#004EAB] group-hover:text-white transition-all duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold text-[#004EAB] bg-[#EBF3FC] px-2.5 py-0.5 rounded-full border border-[#BCD8F8]">
+                    <span className="text-[11px] font-bold text-[#004EAB] bg-[#EBF3FC] px-2.5 py-0.5 rounded-full border border-[#BCD8F8] group-hover:bg-[#004EAB] group-hover:text-white group-hover:border-[#004EAB] transition-all duration-300">
                       {item.stat}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 mb-1.5">
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-[#004EAB] transition-colors duration-200 mb-1.5">
                     {item.title}
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-normal">

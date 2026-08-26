@@ -78,26 +78,26 @@ export default function Workflow() {
           </div>
         </div>
 
-        {/* 4 Step Cards Grid */}
+        {/* 4 Step Cards Grid with Smooth Hover-Lift & Micro-Transitions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div 
                 key={index}
-                className="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/5 transition-all duration-200 flex flex-col justify-between"
+                className="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/10 hover-lift transition-all duration-300 flex flex-col justify-between group cursor-default"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] font-bold flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-[#EBF3FC] text-[#004EAB] font-bold flex items-center justify-center group-hover:scale-110 group-hover:bg-[#004EAB] group-hover:text-white transition-all duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-black text-[#8FBDF3]">
+                    <span className="text-xs font-black text-[#004EAB] bg-[#EBF3FC] px-2.5 py-0.5 rounded-full border border-[#BCD8F8] group-hover:bg-[#004EAB] group-hover:text-white group-hover:border-[#004EAB] transition-all duration-300">
                       STEP {step.num}
                     </span>
                   </div>
 
-                  <h4 className="text-sm sm:text-base font-bold text-slate-900 mb-2">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#004EAB] transition-colors duration-200 mb-2">
                     {step.title}
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed font-normal">

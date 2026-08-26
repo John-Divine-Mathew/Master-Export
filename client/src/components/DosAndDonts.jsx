@@ -83,10 +83,10 @@ export default function DosAndDonts() {
 
               <div className="space-y-4">
                 {dos.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-[#BCD8F8]/50 shadow-2xs">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-3.5 bg-white p-4 sm:p-4.5 rounded-2xl border border-[#BCD8F8]/50 shadow-2xs hover:border-[#004EAB]/60 hover:shadow-md hover-lift transition-all duration-300 group cursor-default">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900">{item.title}</h4>
+                      <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#004EAB] transition-colors">{item.title}</h4>
                       <p className="text-xs text-slate-600 mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -110,10 +110,10 @@ export default function DosAndDonts() {
 
               <div className="space-y-4">
                 {donts.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-rose-100 shadow-2xs">
-                    <XCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-3.5 bg-white p-4 sm:p-4.5 rounded-2xl border border-rose-100 shadow-2xs hover:border-rose-300 hover:shadow-md hover-lift transition-all duration-300 group cursor-default">
+                    <XCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900">{item.title}</h4>
+                      <h4 className="text-sm font-bold text-slate-900 group-hover:text-rose-700 transition-colors">{item.title}</h4>
                       <p className="text-xs text-slate-600 mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>

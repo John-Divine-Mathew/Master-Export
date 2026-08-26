@@ -39,10 +39,10 @@ export default function Navbar() {
             Workflow
           </a>
           <a 
-            href="#documents" 
+            href="#dashboard" 
             className="text-sm font-semibold text-slate-100 hover:text-[#8FBDF3] transition-colors"
           >
-            Trade Documents
+            ERP Dashboard
           </a>
           <a 
             href="#dos-and-donts" 
@@ -88,11 +88,11 @@ export default function Navbar() {
             Business Workflow
           </a>
           <a 
-            href="#documents" 
+            href="#dashboard" 
             onClick={handleNavClick}
             className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-100 hover:bg-[#001848] hover:text-[#8FBDF3] transition-colors"
           >
-            Trade Documents
+            ERP Dashboard
           </a>
           <a 
             href="#dos-and-donts" 

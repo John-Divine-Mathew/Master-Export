@@ -22,15 +22,15 @@ export default function CTABanner() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-3 w-full sm:w-auto">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-xl transition-all shadow-xl shadow-[#004EAB]/30 hover:shadow-[#004EAB]/50 transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] shimmer-btn rounded-xl transition-all duration-300 shadow-xl shadow-[#004EAB]/30 hover:shadow-[#004EAB]/50 transform hover:-translate-y-1 active:scale-[0.98] group"
           >
             <span>Request Enterprise Demo</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           
           <a
             href="#dos-and-donts"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 hover:border-[#BCD8F8]/40 rounded-xl transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 hover:border-[#BCD8F8]/40 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
           >
             <span>Read Do's & Don'ts Guide</span>
           </a>

@@ -25,9 +25,9 @@ export default function Footer() {
             <ul className="space-y-2.5 font-medium">
               <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">Unified Trade Hub</a></li>
               <li><a href="#workflow" className="hover:text-[#8FBDF3] transition-colors">Export-Import Workflow</a></li>
-              <li><a href="#documents" className="hover:text-[#8FBDF3] transition-colors">Customs Document Engine</a></li>
+              <li><a href="#dashboard" className="hover:text-[#8FBDF3] transition-colors">ERP Operations Dashboard</a></li>
               <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">Multi-Currency Forex</a></li>
-              <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">HS Code Standardization</a></li>
+              <li><a href="#contact" className="hover:text-[#8FBDF3] transition-colors">Schedule Live Demo</a></li>
             </ul>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-medium">
               <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">Why Master Export</a></li>
               <li><a href="#workflow" className="hover:text-[#8FBDF3] transition-colors">Business Workflow</a></li>
-              <li><a href="#documents" className="hover:text-[#8FBDF3] transition-colors">Trade Documents Vault</a></li>
+              <li><a href="#dashboard" className="hover:text-[#8FBDF3] transition-colors">Interactive Command Center</a></li>
               <li><a href="#dos-and-donts" className="hover:text-[#8FBDF3] transition-colors">Do's & Don'ts Guide</a></li>
             </ul>
           </div>

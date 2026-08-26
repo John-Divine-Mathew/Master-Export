@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import CountryCoverage from './components/CountryCoverage';
 import WhyThisERP from './components/WhyThisERP';
 import Workflow from './components/Workflow';
-import DocumentVault from './components/DocumentVault';
+import DashboardMockup from './components/DashboardMockup';
 import DosAndDonts from './components/DosAndDonts';
 import ContactForm from './components/ContactForm';
 import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
-import DocPreviewModal from './components/DocPreviewModal';
 import Toast from './components/Toast';
 
 export default function App() {
-  const [docModalOpen, setDocModalOpen] = useState(false);
-  const [selectedDoc, setSelectedDoc] = useState('Commercial Invoice');
   const [toastMessage, setToastMessage] = useState('');
 
   const showToast = (msg) => {
@@ -21,11 +19,6 @@ export default function App() {
     setTimeout(() => {
       setToastMessage('');
     }, 4000);
-  };
-
-  const handleOpenDocPreview = (title) => {
-    setSelectedDoc(title);
-    setDocModalOpen(true);
   };
 
   return (
@@ -36,14 +29,17 @@ export default function App() {
       {/* Clean Minimal Hero Section */}
       <Hero />
 
+      {/* 10-Country Continuous Moving Carousel (Global Trade. Multiple Markets. One ERP.) */}
+      <CountryCoverage />
+
       {/* Why Trading Companies Choose Master Export */}
       <WhyThisERP />
 
       {/* Business Workflow */}
       <Workflow />
 
-      {/* Trade Document Vault Showcase */}
-      <DocumentVault onOpenDocPreview={handleOpenDocPreview} />
+      {/* Live Interactive ERP Dashboard Mockup UI */}
+      <DashboardMockup />
 
       {/* Do's & Don'ts Best Practices Guide */}
       <DosAndDonts />
@@ -56,14 +52,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Document Preview Modal */}
-      <DocPreviewModal 
-        isOpen={docModalOpen} 
-        onClose={() => setDocModalOpen(false)} 
-        docTitle={selectedDoc}
-        onDownload={showToast}
-      />
 
       {/* Global Toast Alerts */}
       <Toast message={toastMessage} />
