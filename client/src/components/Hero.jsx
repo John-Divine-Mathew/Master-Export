@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { 
-  ArrowRight, 
-  Lock, 
+import {
+  ArrowRight,
+  Lock,
   Layers
 } from 'lucide-react';
 
@@ -33,7 +33,7 @@ const HERO_SLIDES = [
   }
 ];
 
-const AUTO_PLAY_INTERVAL = 5000; // Continuous smooth rotation every 5 seconds
+const AUTO_PLAY_INTERVAL = 7000; // Slower, relaxed 7.0 seconds viewing time per slide
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +47,7 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
   }, []);
 
-  // Continuous automatic image transition (loops 1 -> 2 -> 3 -> 4 -> 1)
+  // Continuous automatic image transition (loops every 7 seconds)
   useEffect(() => {
     const timer = setInterval(nextSlide, AUTO_PLAY_INTERVAL);
     return () => clearInterval(timer);
@@ -69,14 +69,14 @@ export default function Hero() {
   };
 
   return (
-    <section 
+    <section
       className="relative min-h-[calc(100vh-80px)] sm:min-h-[calc(100vh-88px)] flex items-center justify-center overflow-hidden bg-[#000F2E] select-none"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       aria-roledescription="carousel"
       aria-label="Master Export ERP Visual Showcase"
     >
-      {/* Background Multi-Image Layer with Cinematic Progressive Crossfade & Smooth Scale */}
+      {/* Background Multi-Image Layer with Smooth 2.0s Dissolve & 9.0s Slow Motion Zoom */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {HERO_SLIDES.map((slide, index) => {
           const isActive = index === currentSlide;
@@ -91,8 +91,8 @@ export default function Hero() {
               <img
                 src={slide.image}
                 alt={slide.alt}
-                className={`w-full h-full object-cover object-center brightness-[0.92] contrast-[1.06] transform transition-transform duration-[6000ms] ease-out will-change-transform ${
-                  isActive ? 'scale-110 translate-y-0' : 'scale-100 translate-y-1'
+                className={`w-full h-full object-cover object-center brightness-[0.92] contrast-[1.06] transform transition-transform duration-[9000ms] ease-out will-change-transform ${
+                  isActive ? 'scale-110' : 'scale-[0.98]'
                 }`}
                 loading={index === 0 ? 'eager' : 'lazy'}
               />
@@ -112,7 +112,7 @@ export default function Hero() {
 
       {/* Centered Content Container with Screen-Fit Layout & High Contrast */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex flex-col items-center justify-center text-center">
-        
+
         {/* Main Headline with drop shadow for crisp readability */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.14] max-w-3xl mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] reveal-init reveal-visible stagger-1">
           Global Trade Operations,{' '}
@@ -135,7 +135,7 @@ export default function Hero() {
             <span>Request ERP Demo</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-          
+
           <a
             href="#workflow"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-bold text-white bg-[#001848]/80 hover:bg-[#001848] backdrop-blur-md border border-white/30 rounded-xl transition-all duration-300 shadow-lg hover:border-[#BCD8F8]/60 hover:-translate-y-0.5"
@@ -155,12 +155,11 @@ export default function Hero() {
                 className={`group relative py-2 px-1 focus:outline-none`}
                 aria-label={`Jump to slide ${idx + 1}`}
               >
-                <div 
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    isActive 
-                      ? 'w-8 sm:w-10 bg-[#004EAB] shadow-md shadow-[#004EAB]/80 ring-1 ring-[#BCD8F8]' 
+                <div
+                  className={`h-1.5 rounded-full transition-all duration-300 ${isActive
+                      ? 'w-8 sm:w-10 bg-[#004EAB] shadow-md shadow-[#004EAB]/80 ring-1 ring-[#BCD8F8]'
                       : 'w-2 sm:w-2.5 bg-white/40 hover:bg-white/75'
-                  }`}
+                    }`}
                 />
               </button>
             );
