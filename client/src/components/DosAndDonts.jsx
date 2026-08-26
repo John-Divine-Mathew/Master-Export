@@ -49,7 +49,7 @@ export default function DosAndDonts() {
   ];
 
   return (
-    <section className="py-14 sm:py-18 bg-white scroll-mt-20 border-b border-slate-200/60" id="dos-and-donts">
+    <section className="py-14 sm:py-18 bg-slate-50/70 scroll-mt-20 border-b border-slate-200/60" id="dos-and-donts">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

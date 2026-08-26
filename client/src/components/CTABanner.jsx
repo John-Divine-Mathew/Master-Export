@@ -21,11 +21,10 @@ export default function CTABanner() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-3 w-full sm:w-auto">
           <a
-            href="#modules"
+            href="#contact"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] rounded-xl transition-all shadow-xl shadow-[#004EAB]/30 hover:shadow-[#004EAB]/50 transform hover:-translate-y-0.5"
           >
-            <Layers className="w-4 h-4 text-[#BCD8F8]" />
-            <span>Explore ERP Modules</span>
+            <span>Request Enterprise Demo</span>
             <ArrowRight className="w-4 h-4" />
           </a>
           

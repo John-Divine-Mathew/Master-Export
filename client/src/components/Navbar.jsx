@@ -27,10 +27,10 @@ export default function Navbar() {
         {/* Desktop Navigation (Visible White Letters & Hover Accents) */}
         <nav className="hidden md:flex items-center gap-6 xl:gap-8">
           <a 
-            href="#modules" 
+            href="#why-us" 
             className="text-sm font-semibold text-slate-100 hover:text-[#8FBDF3] transition-colors"
           >
-            ERP Modules
+            Why Master Export
           </a>
           <a 
             href="#workflow" 
@@ -51,10 +51,10 @@ export default function Navbar() {
             Do's & Don'ts
           </a>
           <a 
-            href="#faq" 
-            className="text-sm font-semibold text-slate-100 hover:text-[#8FBDF3] transition-colors"
+            href="#contact" 
+            className="text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] px-3.5 py-1.5 rounded-xl border border-[#BCD8F8]/40 transition-all shadow-sm"
           >
-            FAQ
+            Contact / Request Demo
           </a>
         </nav>
 
@@ -74,11 +74,11 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden bg-[#000F2E] border-b border-[#001848] px-5 pt-3 pb-6 space-y-2.5 shadow-2xl max-h-[85vh] overflow-y-auto animate-fadeIn">
           <a 
-            href="#modules" 
+            href="#why-us" 
             onClick={handleNavClick}
             className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-100 hover:bg-[#001848] hover:text-[#8FBDF3] transition-colors"
           >
-            ERP Modules
+            Why Master Export
           </a>
           <a 
             href="#workflow" 
@@ -102,11 +102,11 @@ export default function Navbar() {
             Do's & Don'ts Guide
           </a>
           <a 
-            href="#faq" 
+            href="#contact" 
             onClick={handleNavClick}
-            className="block py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-100 hover:bg-[#001848] hover:text-[#8FBDF3] transition-colors"
+            className="block py-2.5 px-3 rounded-lg text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] transition-colors"
           >
-            FAQ & Support
+            Request Demo / Contact Us
           </a>
         </div>
       )}

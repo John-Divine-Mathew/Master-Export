@@ -3,11 +3,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyThisERP from './components/WhyThisERP';
 import Workflow from './components/Workflow';
-import ModuleTabs from './components/ModuleTabs';
 import DocumentVault from './components/DocumentVault';
 import DosAndDonts from './components/DosAndDonts';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
+import ContactForm from './components/ContactForm';
 import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
 import DocPreviewModal from './components/DocPreviewModal';
@@ -44,20 +42,14 @@ export default function App() {
       {/* Business Workflow */}
       <Workflow />
 
-      {/* In-Depth ERP Module Tabs */}
-      <ModuleTabs />
-
       {/* Trade Document Vault Showcase */}
       <DocumentVault onOpenDocPreview={handleOpenDocPreview} />
 
       {/* Do's & Don'ts Best Practices Guide */}
       <DosAndDonts />
 
-      {/* Client Success Stories & Social Proof */}
-      <Testimonials />
-
-      {/* FAQ Accordion */}
-      <FAQ />
+      {/* Professional Contact / Demo Request Form */}
+      <ContactForm />
 
       {/* Call to Action Banner */}
       <CTABanner />

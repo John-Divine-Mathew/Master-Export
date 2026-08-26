@@ -21,13 +21,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold text-xs uppercase tracking-wider mb-4">ERP Modules</h4>
+            <h4 className="text-white font-semibold text-xs uppercase tracking-wider mb-4">Core Platform</h4>
             <ul className="space-y-2.5 font-medium">
-              <li><a href="#modules" className="hover:text-[#8FBDF3] transition-colors">Export Sales Orders</a></li>
-              <li><a href="#modules" className="hover:text-[#8FBDF3] transition-colors">Import Procurement</a></li>
-              <li><a href="#documents" className="hover:text-[#8FBDF3] transition-colors">Customs Documents</a></li>
-              <li><a href="#modules" className="hover:text-[#8FBDF3] transition-colors">Inventory & HS Codes</a></li>
-              <li><a href="#modules" className="hover:text-[#8FBDF3] transition-colors">Buyers & Suppliers</a></li>
+              <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">Unified Trade Hub</a></li>
+              <li><a href="#workflow" className="hover:text-[#8FBDF3] transition-colors">Export-Import Workflow</a></li>
+              <li><a href="#documents" className="hover:text-[#8FBDF3] transition-colors">Customs Document Engine</a></li>
+              <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">Multi-Currency Forex</a></li>
+              <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">HS Code Standardization</a></li>
             </ul>
           </div>
 
@@ -36,8 +36,8 @@ export default function Footer() {
             <ul className="space-y-2.5 font-medium">
               <li><a href="#why-us" className="hover:text-[#8FBDF3] transition-colors">Why Master Export</a></li>
               <li><a href="#workflow" className="hover:text-[#8FBDF3] transition-colors">Business Workflow</a></li>
+              <li><a href="#documents" className="hover:text-[#8FBDF3] transition-colors">Trade Documents Vault</a></li>
               <li><a href="#dos-and-donts" className="hover:text-[#8FBDF3] transition-colors">Do's & Don'ts Guide</a></li>
-              <li><a href="#faq" className="hover:text-[#8FBDF3] transition-colors">FAQ & Support</a></li>
             </ul>
           </div>
 
