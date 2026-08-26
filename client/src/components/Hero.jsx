@@ -33,7 +33,7 @@ const HERO_SLIDES = [
   }
 ];
 
-const AUTO_PLAY_INTERVAL = 2500; // Continuous rotation every 2.5 seconds
+const AUTO_PLAY_INTERVAL = 5000; // Continuous smooth rotation every 5 seconds
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -76,23 +76,23 @@ export default function Hero() {
       aria-roledescription="carousel"
       aria-label="Master Export ERP Visual Showcase"
     >
-      {/* Background Multi-Image Layer with Smooth Fast Crossfade & High Clarity */}
+      {/* Background Multi-Image Layer with Cinematic Progressive Crossfade & Smooth Scale */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {HERO_SLIDES.map((slide, index) => {
           const isActive = index === currentSlide;
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                isActive ? 'opacity-100 z-0' : 'opacity-0 -z-10'
+              className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+                isActive ? 'opacity-100 z-0' : 'opacity-0 z-0'
               }`}
               aria-hidden={!isActive}
             >
               <img
                 src={slide.image}
                 alt={slide.alt}
-                className={`w-full h-full object-cover object-center transform transition-transform duration-4000 ease-out brightness-[0.92] contrast-[1.06] ${
-                  isActive ? 'scale-105' : 'scale-100'
+                className={`w-full h-full object-cover object-center brightness-[0.92] contrast-[1.06] transform transition-transform duration-[6000ms] ease-out will-change-transform ${
+                  isActive ? 'scale-110 translate-y-0' : 'scale-100 translate-y-1'
                 }`}
                 loading={index === 0 ? 'eager' : 'lazy'}
               />
@@ -114,7 +114,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex flex-col items-center justify-center text-center">
         
         {/* Main Headline with drop shadow for crisp readability */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.14] max-w-3xl mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.14] max-w-3xl mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] reveal-init reveal-visible stagger-1">
           Global Trade Operations,{' '}
           <span className="bg-gradient-to-r from-[#BCD8F8] via-[#8FBDF3] to-white bg-clip-text text-transparent">
             Simplified.
@@ -122,12 +122,12 @@ export default function Hero() {
         </h1>
 
         {/* Short Supporting Description */}
-        <p className="mt-4 sm:mt-5 text-xs sm:text-base md:text-lg text-slate-100 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+        <p className="mt-4 sm:mt-5 text-xs sm:text-base md:text-lg text-slate-100 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] reveal-init reveal-visible stagger-2">
           The centralized ERP platform built for export and import businesses. Manage orders, suppliers, customs compliance, and multi-currency financials from one unified platform.
         </p>
 
         {/* Direct Access Hero CTAs */}
-        <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+        <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto reveal-init reveal-visible stagger-3">
           <a
             href="#contact"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-sm font-bold text-white bg-[#004EAB] hover:bg-[#003E8A] shimmer-btn rounded-xl transition-all duration-300 shadow-xl shadow-[#004EAB]/40 hover:shadow-[#004EAB]/60 transform hover:-translate-y-1 active:scale-[0.98] group"

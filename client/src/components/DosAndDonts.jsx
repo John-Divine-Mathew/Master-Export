@@ -52,8 +52,8 @@ export default function DosAndDonts() {
     <section className="py-14 sm:py-18 bg-slate-50/70 scroll-mt-20 border-b border-slate-200/60" id="dos-and-donts">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-2">
+        {/* Header with Smooth Scroll Reveal */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-2 reveal-init">
           <span className="text-xs font-bold uppercase tracking-widest text-[#004EAB]">
             Trade Compliance & Strategy Guide
           </span>
@@ -65,11 +65,11 @@ export default function DosAndDonts() {
           </p>
         </div>
 
-        {/* Two-Column Comparison Grid */}
+        {/* Two-Column Comparison Grid with Smooth Side-Slide Reveals */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Column 1: DO'S */}
-          <div className="bg-[#EBF3FC]/40 border border-[#BCD8F8] rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+          <div className="bg-[#EBF3FC]/40 border border-[#BCD8F8] rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm reveal-init reveal-left stagger-1">
             <div>
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#BCD8F8]/60">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center font-bold shrink-0">
@@ -96,7 +96,7 @@ export default function DosAndDonts() {
           </div>
 
           {/* Column 2: DON'TS */}
-          <div className="bg-rose-50/40 border border-rose-200/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+          <div className="bg-rose-50/40 border border-rose-200/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm reveal-init reveal-right stagger-2">
             <div>
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-rose-200/60">
                 <div className="w-10 h-10 rounded-xl bg-rose-500/15 text-rose-600 flex items-center justify-center font-bold shrink-0">

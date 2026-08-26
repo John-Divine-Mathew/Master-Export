@@ -53,8 +53,8 @@ export default function WhyThisERP() {
     <section className="py-12 sm:py-16 bg-slate-50/60 scroll-mt-20 border-b border-slate-200/60" id="why-us">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        {/* Header with Smooth Scroll Reveal */}
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 reveal-init">
           <span className="text-xs font-bold uppercase tracking-widest text-[#004EAB] block mb-2">
             Why Master Export Pro
           </span>
@@ -66,14 +66,15 @@ export default function WhyThisERP() {
           </p>
         </div>
 
-        {/* 6 High-Impact Cards with Smooth Hover-Lift & Micro-Transitions */}
+        {/* 6 High-Impact Cards with Smooth Staggered Scroll Reveals & Hover-Lift */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {benefits.map((item, idx) => {
             const Icon = item.icon;
+            const staggerClass = `stagger-${(idx % 6) + 1}`;
             return (
               <div 
                 key={idx}
-                className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/10 hover-lift transition-all duration-300 flex flex-col justify-between group cursor-default"
+                className={`bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/10 hover-lift transition-all duration-300 flex flex-col justify-between group cursor-default reveal-init ${staggerClass}`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-3.5">

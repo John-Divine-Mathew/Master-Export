@@ -192,8 +192,8 @@ export default function DashboardMockup() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header (Clean, no badge) */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2">
+        {/* Section Header (Clean, with Smooth Scroll Reveal) */}
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2 reveal-init">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Centralized Business & Operations Dashboard
           </h2>
@@ -203,8 +203,8 @@ export default function DashboardMockup() {
           </p>
         </div>
 
-        {/* Compact Mac OS Styled Dashboard Mockup Window Frame */}
-        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/90 overflow-hidden transition-all duration-300">
+        {/* Compact Mac OS Styled Dashboard Mockup Window Frame with Smooth Reveal */}
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/90 overflow-hidden transition-all duration-300 reveal-init stagger-1 hover:shadow-2xl">
           
           {/* Window Top Title Bar (Mac OS Dots & Controls) */}
           <div className="bg-slate-900 text-white px-3.5 sm:px-5 py-2.5 flex items-center justify-between border-b border-slate-800">

@@ -220,19 +220,213 @@ app.post('/api/auth/login', (req, res) => {
   }
 });
 
-// Demo Request API
-app.post('/api/demo/schedule', (req, res) => {
-  const { name, company, email, phone, tradeType } = req.body;
-  if (!name || !email) {
-    return res.status(400).json({ success: false, message: 'Name and email are required.' });
+// Initialize Resend Transactional Email Client
+const { Resend } = require('resend');
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey || apiKey.includes('your_api_key') || apiKey.includes('your_resend_api_key')) {
+    return null;
   }
+  return new Resend(apiKey);
+};
 
-  res.json({
-    success: true,
-    message: `Demo scheduled for ${name} (${company}). Our export solutions consultant will connect shortly.`
-  });
+// Helper: Escape HTML to prevent injection in email templates
+function escapeHtml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// POST /api/contact - Real Transactional Email Submission
+app.post('/api/contact', async (req, res) => {
+  try {
+    const { name, email, country, message, _hp } = req.body;
+
+    // Honeypot spam prevention check
+    if (_hp) {
+      return res.status(200).json({
+        success: true,
+        message: 'Request received.'
+      });
+    }
+
+    // Input Validation
+    if (!name || typeof name !== 'string' || name.trim().length < 2) {
+      return res.status(400).json({
+        success: false,
+        message: 'Name is required (at least 2 characters).'
+      });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || typeof email !== 'string' || !emailRegex.test(email.trim())) {
+      return res.status(400).json({
+        success: false,
+        message: 'A valid email address is required.'
+      });
+    }
+
+    if (!country || typeof country !== 'string' || country.trim().length < 2) {
+      return res.status(400).json({
+        success: false,
+        message: 'Country is required.'
+      });
+    }
+
+    if (!message || typeof message !== 'string' || message.trim().length < 5) {
+      return res.status(400).json({
+        success: false,
+        message: 'Message is required (at least 5 characters).'
+      });
+    }
+
+    const cleanName = name.trim();
+    const cleanEmail = email.trim();
+    const cleanCountry = country.trim();
+    const cleanMessage = message.trim();
+    const submissionDate = new Date().toUTCString();
+
+    const recipientEmail = process.env.CONTACT_EMAIL || 'info@masterexport.com';
+    const fromAddress = process.env.FROM_EMAIL || 'Master Export ERP <onboarding@resend.dev>';
+
+    // Build Professional HTML Email Template
+    const emailHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f1f5f9; margin: 0; padding: 24px; color: #1e293b; }
+    .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    .header { background: #000F2E; padding: 28px 32px; border-bottom: 3px solid #004EAB; text-align: left; }
+    .brand-title { color: #ffffff; font-size: 20px; font-weight: 800; margin: 0; letter-spacing: -0.5px; }
+    .brand-subtitle { color: #8FBDF3; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+    .content { padding: 32px; }
+    .badge { display: inline-block; background: #EBF3FC; color: #004EAB; font-size: 11px; font-weight: 700; padding: 4px 12px; rounded-full; border-radius: 20px; text-transform: uppercase; margin-bottom: 20px; border: 1px solid #BCD8F8; }
+    .field-group { margin-bottom: 20px; }
+    .field-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .field-value { font-size: 15px; font-weight: 600; color: #0f172a; word-break: break-word; }
+    .message-box { background: #f8fafc; border-left: 4px solid #004EAB; padding: 16px 20px; border-radius: 8px; font-size: 14px; line-height: 1.6; color: #334155; white-space: pre-wrap; margin-top: 8px; }
+    .meta-box { background: #f1f5f9; padding: 12px 16px; border-radius: 8px; font-size: 12px; color: #64748b; margin-top: 28px; }
+    .footer { background: #f8fafc; padding: 20px 32px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="brand-title">Master Export ERP</h1>
+      <div class="brand-subtitle">New Demo & Inquiry Notification</div>
+    </div>
+    <div class="content">
+      <span class="badge">Inbound Portal Submission</span>
+      
+      <div class="field-group">
+        <div class="field-label">Sender Name</div>
+        <div class="field-value">${escapeHtml(cleanName)}</div>
+      </div>
+
+      <div class="field-group">
+        <div class="field-label">Email Address</div>
+        <div class="field-value"><a href="mailto:${escapeHtml(cleanEmail)}" style="color: #004EAB; text-decoration: none;">${escapeHtml(cleanEmail)}</a></div>
+      </div>
+
+      <div class="field-group">
+        <div class="field-label">Country / Region</div>
+        <div class="field-value">${escapeHtml(cleanCountry)}</div>
+      </div>
+
+      <div class="field-group">
+        <div class="field-label">Inquiry Message</div>
+        <div class="message-box">${escapeHtml(cleanMessage)}</div>
+      </div>
+
+      <div class="meta-box">
+        <strong>Submission Timestamp:</strong> ${submissionDate}
+      </div>
+    </div>
+    <div class="footer">
+      This inquiry was delivered securely via the Master Export ERP Web Contact Portal.<br>
+      Reply directly to this email to contact the prospective client.
+    </div>
+  </div>
+</body>
+</html>
+    `.trim();
+
+    const plainText = `
+New Master Export ERP Demo Request
+
+Name: ${cleanName}
+Email: ${cleanEmail}
+Country: ${cleanCountry}
+Date: ${submissionDate}
+
+Message:
+${cleanMessage}
+
+---
+Delivered via Master Export ERP Contact Portal.
+Reply to this email to respond directly to ${cleanName} (${cleanEmail}).
+    `.trim();
+
+    const resendClient = getResendClient();
+
+    if (!resendClient) {
+      console.warn('[Resend Email Warning] RESEND_API_KEY is not configured in server/.env.');
+      console.log(`[Contact Form Received Locally]:
+  - Name: ${cleanName}
+  - Email: ${cleanEmail}
+  - Country: ${cleanCountry}
+  - Destination: ${recipientEmail}
+  - Message: ${cleanMessage}`);
+
+      return res.status(200).json({
+        success: true,
+        message: 'Request Submitted Successfully. Thank you. Our team will get back to you shortly.',
+        devNotice: 'RESEND_API_KEY not configured on server. Add your Resend API key to server/.env for live delivery.'
+      });
+    }
+
+    // Send real email via Resend API
+    const response = await resendClient.emails.send({
+      from: fromAddress,
+      to: recipientEmail,
+      reply_to: cleanEmail,
+      subject: `New Master Export ERP Demo Request - ${cleanName}`,
+      html: emailHtml,
+      text: plainText
+    });
+
+    if (response.error) {
+      console.error('[Resend Delivery Error]:', response.error);
+      return res.status(500).json({
+        success: false,
+        message: response.error.message || 'We could not submit your request right now. Please try again.'
+      });
+    }
+
+    console.log(`[Email Sent Successfully] Resend Email ID: ${response.data?.id} to ${recipientEmail}`);
+
+    return res.status(200).json({
+      success: true,
+      message: 'Request Submitted Successfully',
+      supportingText: 'Thank you. Our team will get back to you shortly.',
+      id: response.data?.id
+    });
+
+  } catch (error) {
+    console.error('[Contact Endpoint Exception]:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'We could not submit your request right now. Please try again.'
+    });
+  }
 });
 
 app.listen(PORT, () => {
   console.log(`Master Export ERP Backend running on http://localhost:${PORT}`);
 });
+

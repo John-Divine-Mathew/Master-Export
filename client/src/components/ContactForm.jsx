@@ -158,8 +158,8 @@ export default function ContactForm() {
     <section className="py-14 sm:py-18 bg-white scroll-mt-20 border-b border-slate-200/60" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2.5">
+        {/* Header with Smooth Scroll Reveal */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2.5 reveal-init">
           <span className="text-xs font-bold uppercase tracking-widest text-[#004EAB]">
             Direct Advisory & Inquiry
           </span>
@@ -174,56 +174,87 @@ export default function ContactForm() {
         {/* Form Container Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start max-w-6xl mx-auto">
           
-          {/* Left Column: Value Proposition & Advisory Details */}
-          <div className="lg:col-span-5 bg-[#000F2E] text-white p-7 sm:p-9 rounded-3xl relative overflow-hidden shadow-xl border border-[#001848] flex flex-col justify-between min-h-[480px]">
+          {/* Left Column: Company Information & Direct Lines */}
+          <div className="lg:col-span-5 bg-[#000F2E] text-white p-6 sm:p-8 rounded-3xl relative overflow-hidden shadow-xl border border-[#001848] flex flex-col justify-between min-h-[540px] reveal-init reveal-left stagger-1">
             {/* Ambient Brand Blue Glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#004EAB]/25 blur-3xl pointer-events-none -z-0" />
 
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#001848] border border-[#004EAB]/40 text-[#8FBDF3] text-xs font-semibold">
                 <Globe2 className="w-3.5 h-3.5" />
-                <span>Global Trade Deployment</span>
+                <span>Enterprise ERP Support</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-black text-white leading-snug">
-                Accelerate Your Export & Import Enterprise
-              </h3>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-black text-white leading-snug">
+                  Media Wave Technologies
+                </h3>
+                <p className="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Enterprise trade ERP & custom international business technology solutions.
+                </p>
+              </div>
 
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                Speak directly with trade solution engineers to map your operational requirements—from Bill of Lading workflows to multi-currency forex margins.
-              </p>
-
-              <div className="space-y-4 pt-2">
-                <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-[#001848] text-[#8FBDF3] border border-[#004EAB]/30 flex items-center justify-center shrink-0">
-                    <Clock className="w-4 h-4 text-[#8FBDF3]" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-white">Rapid 24-Hour Response</h4>
-                    <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">Our trade consultants review and respond promptly to all verified submissions.</p>
+              {/* Direct Personnel & Support Lines */}
+              <div className="space-y-2.5 pt-1">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  Direct Support & Developer Lines
+                </div>
+                
+                {/* Company Support Line */}
+                <div className="bg-[#001848]/90 border border-white/10 rounded-2xl p-3.5 space-y-1">
+                  <div className="text-xs font-bold text-white">Media Wave Technologies</div>
+                  <div className="text-[11px] text-[#8FBDF3]">Company Official Line</div>
+                  <div className="text-xs text-slate-200 font-mono pt-1">
+                    <a href="tel:+916369153235" className="hover:text-white transition-colors">
+                      +91 63691 53235
+                    </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-[#001848] text-[#8FBDF3] border border-[#004EAB]/30 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-4 h-4 text-[#8FBDF3]" />
+                {/* Developer Line */}
+                <div className="bg-[#001848]/90 border border-white/10 rounded-2xl p-3.5 space-y-1">
+                  <div className="text-xs font-bold text-white">Technical Support</div>
+                  <div className="text-[11px] text-[#8FBDF3]">Lead Developer Contact</div>
+                  <div className="text-xs text-slate-200 font-mono pt-1">
+                    <a href="tel:+919940440767" className="hover:text-white transition-colors">
+                      +91 99404 40767
+                    </a>
                   </div>
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-white">Confidential & Compliant</h4>
-                    <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">Your organization's trade inquiries and contact details are fully encrypted and protected.</p>
-                  </div>
+                </div>
+              </div>
+
+              {/* Office Address & Operating Hours */}
+              <div className="space-y-2 pt-1 text-xs text-slate-300">
+                <div className="flex items-start gap-2">
+                  <span className="text-slate-400">📍</span>
+                  <span className="leading-relaxed">
+                    WD-54, Anandha bhavan complex, Second floor, 17/52, Puthur High Rd, Tiruchirappalli, Tamil Nadu - 620017
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-3.5 h-3.5 text-[#8FBDF3] shrink-0 mt-0.5" />
+                  <span>Mon – Sat: <strong>9:00 AM – 6:00 PM (IST)</strong></span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Mail className="w-3.5 h-3.5 text-[#8FBDF3] shrink-0 mt-0.5" />
+                  <a href="mailto:info@mediawavetech.com" className="hover:text-white transition-colors underline">
+                    info@mediawavetech.com
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10 pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
-              <span className="font-semibold text-slate-300">Master Export ERP</span>
-              <span className="text-[11px] text-[#8FBDF3]">info@masterexport.com</span>
+            <div className="relative z-10 pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+              <span className="font-semibold text-slate-300">Media Wave Technologies</span>
+              <div className="flex items-center gap-1.5 text-emerald-400 text-[11px]">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>256-Bit Encrypted</span>
+              </div>
             </div>
           </div>
 
           {/* Right Column: Contact / Demo Request Form */}
-          <div className="lg:col-span-7 bg-slate-50/70 border border-slate-200/80 rounded-3xl p-6 sm:p-9 shadow-sm">
+          <div className="lg:col-span-7 bg-slate-50/70 border border-slate-200/80 rounded-3xl p-6 sm:p-9 shadow-sm reveal-init reveal-right stagger-2">
             
             {/* SUCCESS STATE */}
             {status === 'success' ? (

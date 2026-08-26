@@ -47,7 +47,7 @@ export default function Workflow() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 reveal-init">
           <span className="text-xs font-bold uppercase tracking-widest text-[#004EAB] block mb-2">
             Execution Flow
           </span>
@@ -59,12 +59,12 @@ export default function Workflow() {
           </p>
         </div>
 
-        {/* Ecosystem Pipeline Ribbon */}
-        <div className="mb-8 bg-white rounded-2xl p-3 sm:p-4 border border-[#BCD8F8]/60 shadow-2xs max-w-3xl mx-auto">
+        {/* Ecosystem Pipeline Ribbon with Smooth Entrance */}
+        <div className="mb-8 bg-white rounded-2xl p-3 sm:p-4 border border-[#BCD8F8]/60 shadow-2xs max-w-3xl mx-auto reveal-init stagger-1">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-bold text-slate-700">
             {pipeline.map((item, idx) => (
               <React.Fragment key={idx}>
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#EBF3FC] border border-[#BCD8F8] shadow-2xs hover:border-[#004EAB] transition-colors">
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#EBF3FC] border border-[#BCD8F8] shadow-2xs hover:border-[#004EAB] hover:shadow-sm transition-all duration-300 transform hover:-translate-y-0.5">
                   <span className="w-4 h-4 rounded-full bg-[#004EAB] text-white text-[9px] flex items-center justify-center font-black">
                     {item.icon}
                   </span>
@@ -78,14 +78,15 @@ export default function Workflow() {
           </div>
         </div>
 
-        {/* 4 Step Cards Grid with Smooth Hover-Lift & Micro-Transitions */}
+        {/* 4 Step Cards Grid with Smooth Staggered Scroll Reveals & Hover-Lift */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
+            const staggerClass = `stagger-${index + 2}`;
             return (
               <div 
                 key={index}
-                className="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/10 hover-lift transition-all duration-300 flex flex-col justify-between group cursor-default"
+                className={`bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-[#BCD8F8] hover:shadow-xl hover:shadow-[#004EAB]/10 hover-lift transition-all duration-300 flex flex-col justify-between group cursor-default reveal-init ${staggerClass}`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
